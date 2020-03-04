@@ -28,6 +28,20 @@ Lapusneanu Andrei-Eugen, 12th Grade National College, Frontend Dev
 
 To be added
 
+## Installation Guide
+
+1) Clone or download repo
+2) Start local server ( xampp or any other Apache app )
+3) Create local database named 'retrosite'
+4) Open project folder using IDE of choice
+5) Run 'php artisan migrate' & 'php artisan serve' commands in terminal
+6) Server opens up on port 8000 (default) connect via localhost:8000/
+
+Prerequisites: Php ^7.0, Laravel ^6.0, Composer, Npm
+
+An online host for testing will be provided ar a further date, will link in read.me
+
+
 ## Security Vulnerabilities
 
 If you discover a security vulnerability within $Retro-site, please send an e-mail to Radu Mihnea via [radumihneaa@gmail.com](mailto:radumihneaa@gmail.com). All security vulnerabilities will be promptly addressed.
