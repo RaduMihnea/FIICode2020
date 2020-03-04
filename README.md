@@ -21,6 +21,7 @@ The final version should include:
 ## Contributors
 
 Radu Mihnea-Adrian, 12th Grade National College, Backend Developer
+
 Lapusneanu Andrei-Eugen, 12th Grade National College, Frontend Dev
 
 ## Code of Conduct
