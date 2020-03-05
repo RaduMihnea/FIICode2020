@@ -20,7 +20,7 @@ class CreateArticlesTable extends Migration
             $table->integer('price');
             $table->string('location');
             $table->integer('seller_id');
-            $table->timestamps('created_at');
+            $table->timestamps();
         });
     }
 

@@ -14,7 +14,11 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        return 'Works';
+        $articles = Articles::take(3)->latest()->get();
+
+        return $articles;
+
+        return view('articles.index', ['articles' => $articles]);
     }
 
     /**
@@ -24,7 +28,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        //
+        return view('articles.create');
     }
 
     /**
