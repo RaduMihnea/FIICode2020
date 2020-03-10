@@ -53,45 +53,57 @@ class ProductsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $r
+     * @param Product $product
      * @return \Illuminate\Http\Response
+     * @internal param Product $r
      */
     public function show(Product $product)
     {
-        //
+        return view('products.show', ['product' => $product]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Product  $r
+     * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
     public function edit(Product $product)
     {
-        //
+        return view('products.edit', ['product' => $product]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $r
+     * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $r)
+    public function update(Request $request, Product $product)
     {
-        //
+        $attributes = $request->validate([
+            'title' => ['required', 'max:255', 'min:3'],
+            'description' => ['required', 'min:3'],
+            'price' => 'required',
+        ]);
+
+        $attributes['owner_id'] = 1;
+
+        $product->update($attributes);
+
+        return redirect('products');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $r
+     * @param Product $product
      * @return \Illuminate\Http\Response
+     * @internal param Product $r
      */
-    public function destroy(Product $r)
+    public function destroy(Product $product)
     {
-        //
+        $product->delete();
     }
 }
