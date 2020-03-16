@@ -14,7 +14,8 @@
                             <div class="row">
                                 <div class="col-sm-8">
                                     <h5 class="card-title">{{$product->title}}</h5>
-                                    @if($product->description)<p class="card-body">{{$product->description}}</p>@endif
+                                    <p class="card-body">{{$product->description}}</p>
+                                    <p class="card-body">{{$product->price}}</p>
                                 </div>
                             </div>
                             <div class="row">

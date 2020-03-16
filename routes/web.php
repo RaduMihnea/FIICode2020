@@ -20,3 +20,6 @@ Route::get('/', function(){
 });
 
 Route::resource('products', 'ProductsController');
+
+Route::get('/sales', 'SalesController@index');
+Route::post('/sales', 'SalesController@store');

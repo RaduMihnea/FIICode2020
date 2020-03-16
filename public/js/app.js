@@ -45427,7 +45427,7 @@ function listenerAtPhase(inst, event, propagationPhase) {
  */
 
 /**
- * Tags a `SyntheticEvent` with dispatched listeners. Creating this function
+ * Tag a `SyntheticEvent` with dispatched listeners. Creating this function
  * here, allows us to not have to bind or create functions for each event.
  * Mutating the event's members allows us to not have to create a wrapping
  * "dispatch" object that pairs the event with the listener.
@@ -61833,7 +61833,7 @@ function injectIntoDevTools(devToolsConfig) {
     // Enables DevTools to append owner stacks to error messages in DEV mode.
     getCurrentFiber:  function () {
       return current;
-    } 
+    }
   }));
 }
 var IsSomeRendererActing$1 = ReactSharedInternals.IsSomeRendererActing;
