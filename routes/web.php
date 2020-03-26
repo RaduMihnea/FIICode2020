@@ -23,3 +23,9 @@ Route::resource('products', 'ProductsController');
 
 Route::get('/sales', 'SalesController@index');
 Route::post('/sales', 'SalesController@store');
+//Route::get('/sales/confirm', 'SalesController@');
+
+//Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+

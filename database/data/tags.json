@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Animals"
+    },
+    {
+        "id": 2,
+        "name": "Books"
+    },
+    {
+        "id": 3,
+        "name": "Food"
+    },
+    {
+        "id": 4,
+        "name": "Homemade"
+    },
+    {
+        "id": 5,
+        "name": "Clothing"
+    },
+    {
+        "id": 6,
+        "name": "Furniture"
+    },
+    {
+        "id": 7,
+        "name": "Cars"
+    }
+]

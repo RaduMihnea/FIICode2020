@@ -17,13 +17,17 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('email')->unique();
-            $table->integer('jud_id');
+            $table->unsignedBigInteger('county_id');
             $table->integer('age');
             $table->string('address');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('county_id')
+                ->references('id')
+                ->on('counties');
         });
     }
 

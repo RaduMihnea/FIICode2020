@@ -2,16 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\NewSaleMail;
+use App\Notifications\NewSaleNotification;
 use App\Sale;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use function MongoDB\BSON\toJSON;
 
 class SalesController extends Controller
 {
     public function index()
     {
-        $sales = Sale::findOrFail()->get();
 
-        return view('sales.index', compact('sales'));
+
+        $sales = Sale::all()->get();
+
+        return redirect('products');
     }
 
     public function store(Request $request)
@@ -24,7 +31,17 @@ class SalesController extends Controller
 
         Sale::create($attributes);
 
+        $seller = User::findOrFail($request->input('seller_id'));
+
+        $seller->notify(new NewSaleNotification(auth()->user()->name));
+
         return redirect('products');
+    }
+
+    public function confirm(){
+
+
+
     }
 
 }

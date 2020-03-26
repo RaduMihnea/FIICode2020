@@ -9,7 +9,7 @@
 
                 <div class="card-body">
 
-                    @foreach($products as $product)
+                    @forelse($products as $product)
                     <div class="card" style="margin-bottom: 2em">
                         <div class="card-body">
                             <div class="row">
@@ -20,7 +20,9 @@
                             </div>
                         </div>
                     </div>
-                    @endforeach
+                    @empty
+                        <p>No relevant products yet.</p>
+                    @endforelse
                 </div>
             </div>
         </div>

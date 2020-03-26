@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Tag;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -14,40 +15,33 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->get();
+        if (request('tag')) {
+            $products = Tag::where('name', request('tag'))->firstOrFail()->products;
+        } else {
+            $products = Product::latest()->get();
+        }
 
-        return view('Products.index', compact('products'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('products.create');
+//        return view('products.index', ["products" => $products]);
+        return response()->json(['data' => $products], 200);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $attributes = $request->validate([
-            'title' => ['required', 'max:255', 'min:3'],
-            'description' => ['required', 'min:3'],
-            'price' => 'required',
-        ]);
+        $this->validateRequest();
 
-        $attributes['owner_id'] = 1;
+        $attributes = request(['title', 'description', 'price', 'seller_id', 'negotiable', 'county_id']);
 
-        Product::create($attributes);
+        $product = Product::create($attributes);
 
-        return redirect('products');
+        $product->tags()->attach(request('tags'));
+
+        return response()->json("Product Created" );
     }
 
     /**
@@ -59,40 +53,25 @@ class ProductsController extends Controller
      */
     public function show(Product $product)
     {
-        return view('products.show', ['product' => $product]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Product $product)
-    {
-        return view('products.edit', ['product' => $product]);
+        return response()->json($product);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\Product $product
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Product $product)
     {
-        $attributes = $request->validate([
-            'title' => ['required', 'max:255', 'min:3'],
-            'description' => ['required', 'min:3'],
-            'price' => 'required',
-        ]);
+        $this->validateRequest();
 
-        $attributes['owner_id'] = 1;
+        $attributes = request(['title', 'description', 'price', 'seller_id', 'negotiable', 'county_id']);
 
         $product->update($attributes);
 
-        return redirect('products');
+        return response()->json("Product Updated" );
     }
 
     /**
@@ -105,5 +84,20 @@ class ProductsController extends Controller
     public function destroy(Product $product)
     {
         $product->delete();
+
+        return response()->json("Product Deleted" );
     }
+
+    public function validateRequest()
+    {
+        return request()->validate([
+            'title' => ['required', 'max:255', 'min:3'],
+            'description' => ['required', 'min:3'],
+            'price' => 'required',
+            'tags' => 'exists:tags,id',
+            'seller_id' => 'required',
+            'county_id' => 'exists:counties,id'
+        ]);
+    }
+
 }

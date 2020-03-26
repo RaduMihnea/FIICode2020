@@ -16,6 +16,11 @@
                                     <h5 class="card-title">{{$product->title}}</h5>
                                     <p class="card-body">{{$product->description}}</p>
                                     <p class="card-body">{{$product->price}}</p>
+                                    <p>
+                                        @foreach ($product->tags as $tag)
+                                        <a href={{"/products?tag=" . $tag->name }}>{{$tag->name}}</a>
+                                        @endforeach
+                                    </p>
                                 </div>
                             </div>
                             <div class="row">
@@ -25,6 +30,7 @@
                                     @csrf
                                 </form>
                                 <a class="action" style="margin-left: 5em" href="{{"/products/" . $product->id . "/edit"}}">EDIT</a>
+
                             </div>
                         </div>
                     </div>

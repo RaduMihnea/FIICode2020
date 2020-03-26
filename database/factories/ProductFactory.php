@@ -10,6 +10,7 @@ $factory->define(Product::class, function (Faker $faker) {
         'title' => $faker->sentence(),
         'description' => $faker->realText(),
         'price' => $faker->randomNumber(),
-        'owner_id' => factory(\App\User::class),
+        'negotiable' => $faker->boolean(),
+        'seller_id' => factory(\App\User::class),
     ];
 });

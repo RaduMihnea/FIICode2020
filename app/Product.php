@@ -10,14 +10,20 @@ class Product extends Model
         'title',
         'description',
         'price',
-        'owner_id'
+        'seller_id',
+        'negotiable',
+        'county_id'
     ];
 
     public function owner(){
-        return $this->belongsTo(User::class, 'owner_id', 'id');
+        return $this->belongsTo(User::class, 'seller_id', 'id');
     }
 
     public function tags(){
-        return $this->belongsToMany(Tag::class, 'product_tag', 'product_id');
+        return $this->belongsToMany(Tag::class, 'product_tag', 'product_id')->withTimestamps();
+    }
+
+    public function county(){
+        return $this->belongsTo(County::class, 'county_id', 'id');
     }
 }

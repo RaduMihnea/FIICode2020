@@ -18,13 +18,19 @@ class CreateProductsTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->integer('price');
-            $table->unsignedBigInteger('owner_id');
+            $table->boolean('negotiable');
+            $table->unsignedBigInteger('seller_id');
+            $table->unsignedBigInteger('county_id');
             $table->timestamps();
 
-            $table->foreign('owner_id')
+            $table->foreign('seller_id')
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
+
+            $table->foreign('county_id')
+                ->references('id')
+                ->on('counties');
         });
     }
 

@@ -43,6 +43,23 @@
                             </div>
                         </div>
 
+                        <div class="card" style="margin-bottom: 2em">
+                            <div class="select is-multiple control">
+                                <h2>Tags</h2>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <select
+                                            name="tags[]"
+                                            multiple>
+                                            @foreach ($tags as $tag)
+                                                <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <button type="submit" class="button-blue">Submit</button>
                     </div>
                 </form>
