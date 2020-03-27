@@ -12,7 +12,8 @@ class Product extends Model
         'price',
         'seller_id',
         'negotiable',
-        'county_id'
+        'county_id',
+        'image'
     ];
 
     public function owner(){

@@ -35,7 +35,7 @@ class ProductsController extends Controller
     {
         $this->validateRequest();
 
-        $attributes = request(['title', 'description', 'price', 'seller_id', 'negotiable', 'county_id']);
+        $attributes = request(['title', 'description', 'price', 'seller_id', 'negotiable', 'county_id', 'image']);
 
         $product = Product::create($attributes);
 
@@ -96,7 +96,8 @@ class ProductsController extends Controller
             'price' => 'required',
             'tags' => 'exists:tags,id',
             'seller_id' => 'required',
-            'county_id' => 'exists:counties,id'
+            'county_id' => 'exists:counties,id',
+            'image' => 'required'
         ]);
     }
 

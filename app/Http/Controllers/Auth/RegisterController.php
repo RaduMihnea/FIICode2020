@@ -74,7 +74,8 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8'],
             'county_id' => ['required'],
             'age' => ['required'],
-            'address' => ['required']
+            'address' => ['required'],
+            'image' => ['required'],
         ]);
     }
 
@@ -93,6 +94,7 @@ class RegisterController extends Controller
             'age' => $data['age'],
             'address' => $data['address'],
             'password' => Hash::make($data['password']),
+            'image' => $data['image']
         ]);
     }
 }
