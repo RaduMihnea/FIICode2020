@@ -53,6 +53,8 @@ class ProductsController extends Controller
      */
     public function show(Product $product)
     {
+        $product->tags;
+
         return response()->json($product);
     }
 
