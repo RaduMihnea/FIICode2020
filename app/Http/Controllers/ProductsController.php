@@ -21,7 +21,10 @@ class ProductsController extends Controller
             $products = Product::latest()->get();
         }
 
-//        return view('products.index', ["products" => $products]);
+        foreach ( $products as $product) {
+            $product->tags;
+        }
+
         return response()->json(['data' => $products], 200);
     }
 
