@@ -13,7 +13,8 @@ class Product extends Model
         'seller_id',
         'negotiable',
         'county_id',
-        'image'
+        'image',
+        'max_quantity'
     ];
 
     public function owner(){
@@ -27,4 +28,8 @@ class Product extends Model
     public function county(){
         return $this->belongsTo(County::class, 'county_id', 'id');
     }
+
+//    public function items(){
+//        return $this->hasMany(Product::class, 'product_id', 'id');
+//    }
 }

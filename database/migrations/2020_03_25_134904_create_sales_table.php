@@ -18,6 +18,8 @@ class CreateSalesTable extends Migration
             $table->unsignedBigInteger('seller_id')->nullable();
             $table->unsignedBigInteger('buyer_id')->nullable();
             $table->integer('price');
+            $table->boolean('confirmed')->default(false);
+            $table->timestamp('confirmed_at');
             $table->timestamps();
 
             $table->foreign('seller_id')

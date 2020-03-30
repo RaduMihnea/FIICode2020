@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->integer('price');
             $table->boolean('negotiable');
             $table->longText('image');
+            $table->integer('max_quantity');
             $table->unsignedBigInteger('seller_id');
             $table->unsignedBigInteger('county_id');
             $table->timestamps();

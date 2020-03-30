@@ -38,7 +38,7 @@ class ProductsController extends Controller
     {
         $this->validateRequest();
 
-        $attributes = request(['title', 'description', 'price', 'seller_id', 'negotiable', 'county_id', 'image']);
+        $attributes = request(['title', 'description', 'price', 'seller_id', 'negotiable', 'county_id', 'image', 'max_quantity']);
 
         $product = Product::create($attributes);
 
@@ -72,7 +72,7 @@ class ProductsController extends Controller
     {
         $this->validateRequest();
 
-        $attributes = request(['title', 'description', 'price', 'seller_id', 'negotiable', 'county_id']);
+        $attributes = request(['title', 'description', 'price', 'seller_id', 'negotiable', 'county_id', 'image', 'max_quantity']);
 
         $product->update($attributes);
 
@@ -102,7 +102,8 @@ class ProductsController extends Controller
             'tags' => 'exists:tags,id',
             'seller_id' => 'required',
             'county_id' => 'exists:counties,id',
-            'image' => 'required'
+            'image' => 'required',
+            'maxQuantity' => 'required'
         ]);
     }
 

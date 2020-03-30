@@ -19,4 +19,8 @@ class Sale extends Model
     public function buyer(){
         return $this->belongsTo(User::class, 'buyer_id', 'id');
     }
+
+    public function confirm(){
+        $this->confirmed = true;
+    }
 }

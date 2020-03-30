@@ -14,11 +14,9 @@ class SalesController extends Controller
 {
     public function index()
     {
-
-
         $sales = Sale::all()->get();
 
-        return redirect('products');
+        return response()->json($sales);
     }
 
     public function store(Request $request)
@@ -35,13 +33,23 @@ class SalesController extends Controller
 
         $seller->notify(new NewSaleNotification(auth()->user()->name));
 
-        return redirect('products');
+        return response()->json("Sale Initiated");
     }
 
-    public function confirm(){
+    public function confirm(Sale $sale)
+    {
+        if(!$sale->confirmed){
+            $sale->confirm();
 
+            $buyer = User::findOrFaiL($sale->buyer_id);
+            $seller = User::findOrFail($sale->seller_id);
 
+            $buyer->notify(new SaleConfirmationNotification($seller));
+            $seller->notify(new SaleConfirmationNotification($buyer));
 
+            return response()->json("Saled Confirmed");
+        }
+        else return response()->json("Saled already confirmed", 401);
     }
 
 }

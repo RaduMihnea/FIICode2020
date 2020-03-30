@@ -22,7 +22,7 @@ class User extends Authenticatable
     ];
 
     protected $encryptable = [
-        'name', 'address', 'age', 'image'
+        'name', 'address', 'age',
     ];
 
     /**
