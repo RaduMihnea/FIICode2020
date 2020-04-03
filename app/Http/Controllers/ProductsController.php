@@ -16,16 +16,16 @@ class ProductsController extends Controller
     public function index()
     {
         if (request('tag')) {
-            $products = Tag::where('name', request('tag'))->firstOrFail()->products;
+            $products = Tag::where('name', request('tag'))->firstOrFail()->products->where('sold_out', 0);
         } else {
-            $products = Product::latest()->get();
+            $products = Product::where('sold_out', 0)->get();
         }
 
         foreach ( $products as $product) {
             $product->tags;
         }
 
-        return response()->json(['data' => $products], 200);
+        return response()->json($products, 200);
     }
 
     /**
@@ -103,7 +103,7 @@ class ProductsController extends Controller
             'seller_id' => 'required',
             'county_id' => 'exists:counties,id',
             'image' => 'required',
-            'maxQuantity' => 'required'
+            'max_quantity' => 'required'
         ]);
     }
 

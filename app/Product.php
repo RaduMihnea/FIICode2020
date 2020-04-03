@@ -14,7 +14,8 @@ class Product extends Model
         'negotiable',
         'county_id',
         'image',
-        'max_quantity'
+        'max_quantity',
+        'sold_out'
     ];
 
     public function owner(){
@@ -29,7 +30,13 @@ class Product extends Model
         return $this->belongsTo(County::class, 'county_id', 'id');
     }
 
-//    public function items(){
-//        return $this->hasMany(Product::class, 'product_id', 'id');
-//    }
+    public function changeQuantity($quantity){
+        $this->max_quantity = $this->max_quantity + $quantity;
+        $this->save();
+    }
+
+    public function soldOut($status){
+        $this->sold_out = $status;
+        $this->save();
+    }
 }

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Cart;
 use App\Http\Controllers\Controller;
+use App\Notifications\VerifyEmail;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Auth\Events\Registered;
@@ -56,6 +58,8 @@ class RegisterController extends Controller
 
         $user = $this->create($request->all());
 
+//        $user->notify(new VerifyEmail);
+
         return response()->json($user);
     }
 
@@ -87,7 +91,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user =  User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'county_id' => $data['county_id'],
@@ -96,5 +100,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'image' => $data['image']
         ]);
+        Cart::create(['user_id' => $user->id]);
+        return $user;
     }
 }

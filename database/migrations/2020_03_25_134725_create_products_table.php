@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->integer('max_quantity');
             $table->unsignedBigInteger('seller_id');
             $table->unsignedBigInteger('county_id');
+            $table->boolean('sold_out')->default(false);
             $table->timestamps();
 
             $table->foreign('seller_id')

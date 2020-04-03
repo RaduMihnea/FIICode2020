@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Notifications\VerifyEmail;
 use App\Traits\Encryptable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -48,18 +49,23 @@ class User extends Authenticatable
         return $this->hasMany(Product::class, 'seller_id', 'id');
     }
 
-    public function sales()
+    public function sells()
     {
-        return $this->hasMany(Sale::class, 'seller_id', 'id');
+        return $this->hasMany(Order::class, 'seller_id', 'id');
     }
 
     public function buys()
     {
-        return $this->hasMany(Sale::class, 'buyer_id', 'id');
+        return $this->hasMany(Order::class, 'buyer_id', 'id');
     }
 
     public function county()
     {
         return $this->belongsTo(County::class, 'county_id', 'id');
     }
+
+    public function cart(){
+        return $this->hasOne(Cart::class, 'user_id', 'id');
+    }
+
 }

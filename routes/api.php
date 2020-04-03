@@ -23,23 +23,31 @@ Route::get('/products', 'ProductsController@index');
 Route::get('/products/{product}', 'ProductsController@show');
 
 
-Route::get('/sales', 'SalesController@index');
-Route::post('/sales', 'SalesController@store');
-//Route::get('/sales/confirm', 'SalesController@');
+Route::get('/sales', 'OrderController@index');
+Route::post('/sales', 'OrderController@store');
+//Route::get('/sales/confirm', 'OrderController@');
 
 //Auth::routes();
 
 Route::post('register', 'Auth\RegisterController@register');
 Route::post('/login', 'Auth\LoginController@login');
+Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::group(['middleware' => ['auth:api']], function(){
     Route::post('/logout', 'Auth\LoginController@logout');
     Route::post('/products', 'ProductsController@store');
     Route::put('/products/{product}', 'ProductsController@update');
     Route::delete('/products/{product}', 'ProductsController@destroy');
-    Route::post('/sales', 'SalesController@store');
-    Route::post('/sales/{sale}', 'SalesController@confirm');
+    Route::post('/orders', 'OrderController@store');
+    Route::post('/orders/{order}', 'OrderController@confirm');
+    Route::get('/orders/{order}', 'OrderController@show');
     Route::get('/user/products', 'UsersController@products');
+    Route::get('/user/buys', 'UsersController@buys');
+    Route::post('/cart/add-product', 'CartController@add');
+    Route::post('/cart/remove-product', 'CartController@remove');
+    Route::post('/cart/change-product', 'CartController@change');
+    Route::get('/cart', 'CartController@products');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

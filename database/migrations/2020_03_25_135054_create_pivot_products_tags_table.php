@@ -40,6 +40,6 @@ class CreatePivotProductsTagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pivot_products_tags');
+        Schema::dropIfExists('product_tag');
     }
 }

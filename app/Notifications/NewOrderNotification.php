@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class NewSaleNotification extends Notification
+class NewOrderNotification extends Notification
 {
     use Queueable;
 
@@ -17,11 +17,11 @@ class NewSaleNotification extends Notification
      * @return void
      */
 
-    public $buyer_name;
+    public $mail_data;
 
-    public function __construct( $buyer_name)
+    public function __construct( $mail_data )
     {
-        $this->buyer_name = $buyer_name;
+        $this->mail_data = $mail_data;
     }
 
     /**
@@ -44,11 +44,8 @@ class NewSaleNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->subject("Cineva vrea sa iti cumpere produsul")
-                    ->greeting("Produsul adaugat de tine este cautat")
-                    ->line( "ceva test" )
-                    ->action('Confirma Vinzarea', url('localhost:8000/sale/confirm'))
-                    ->line('Toate cele bune, Echipa Piazeta');
+                    ->subject("Someone wants to buy your product")
+                    ->view('mail.new-order', ['mail_data' => $this->mail_data]);
     }
 
     /**

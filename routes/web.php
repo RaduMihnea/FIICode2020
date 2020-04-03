@@ -21,9 +21,9 @@ Route::get('/', function(){
 
 Route::resource('products', 'ProductsController');
 
-Route::get('/sales', 'SalesController@index');
-Route::post('/sales', 'SalesController@store');
-//Route::get('/sales/confirm', 'SalesController@');
+Route::get('/sales', 'OrderController@index');
+Route::post('/sales', 'OrderController@store');
+//Route::get('/sales/confirm', 'OrderController@');
 
 //Auth::routes();
 
