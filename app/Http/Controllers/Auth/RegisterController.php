@@ -80,6 +80,7 @@ class RegisterController extends Controller
             'age' => ['required'],
             'address' => ['required'],
             'image' => ['required'],
+            'phone' => ['required'],
         ]);
     }
 
@@ -98,7 +99,8 @@ class RegisterController extends Controller
             'age' => $data['age'],
             'address' => $data['address'],
             'password' => Hash::make($data['password']),
-            'image' => $data['image']
+            'image' => $data['image'],
+            'phone' => $data['phone'],
         ]);
         Cart::create(['user_id' => $user->id]);
         return $user;

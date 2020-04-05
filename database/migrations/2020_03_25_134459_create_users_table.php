@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->longText('age');
             $table->longText('address');
             $table->longText('image');
+            $table->longText('phone');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

@@ -8,7 +8,7 @@
     <meta name="x-apple-disable-message-reformatting">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="telephone=no" name="format-detection">
-    <title>You have a new order</title>
+    <title>Order confirmed</title>
     <!--[if (mso 16)]>
     <style type="text/css">
         a {
@@ -464,7 +464,7 @@
                                                                         Email: {{$user['email']}}
                                                                     </li>
                                                                     <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;Margin-bottom:15px;color:#777777;">
-                                                                        Telephone:
+                                                                        Telephone: {{$users['phone']}}
                                                                     </li>
                                                                     <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:16px;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:24px;Margin-bottom:15px;color:#777777;">
                                                                         Adress: {{$user['address']}}
