@@ -11,21 +11,3 @@
 |
 */
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/', function(){
-   return redirect('/products');
-});
-
-Route::resource('products', 'ProductsController');
-
-Route::get('/sales', 'OrderController@index');
-Route::post('/sales', 'OrderController@store');
-//Route::get('/sales/confirm', 'OrderController@');
-
-//Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-

@@ -21,7 +21,7 @@ class ProductsController extends Controller
             $products = Product::where('sold_out', 0)->get();
         }
 
-        foreach ( $products as $product) {
+        foreach ($products as $product) {
             $product->tags;
         }
 
@@ -44,7 +44,7 @@ class ProductsController extends Controller
 
         $product->tags()->attach(request('tags'));
 
-        return response()->json("Product Created" );
+        return response()->json("Product Created");
     }
 
     /**
@@ -70,13 +70,15 @@ class ProductsController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        $this->validateRequest();
+        if (auth()->user()->isAdmin() || auth()->user()->id === $product->owner()->id) {
+            $this->validateRequest();
 
-        $attributes = request(['title', 'description', 'price', 'seller_id', 'negotiable', 'county_id', 'image', 'max_quantity']);
+            $attributes = request(['title', 'description', 'price', 'seller_id', 'negotiable', 'county_id', 'image', 'max_quantity']);
 
-        $product->update($attributes);
+            $product->update($attributes);
 
-        return response()->json("Product Updated" );
+            return response()->json("Product Updated");
+        }
     }
 
     /**
@@ -88,9 +90,11 @@ class ProductsController extends Controller
      */
     public function destroy(Product $product)
     {
-        $product->delete();
+        if (auth()->user()->isAdmin() || auth()->user()->id === $product->owner->id) {
+            $product->delete();
 
-        return response()->json("Product Deleted" );
+            return response()->json("Product Deleted");
+        }
     }
 
     public function validateRequest()

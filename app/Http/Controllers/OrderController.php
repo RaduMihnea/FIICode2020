@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\NeworderMail;
-use App\Notifications\NeworderNotification;
+use App\Notifications\NewOrderNotification;
 use App\Notifications\orderConfirmationNotification;
 use App\Notifications\orderDeniedNotification;
 use App\Product;
@@ -36,7 +36,7 @@ class OrderController extends Controller
             }
             $mail_data = ['buyer_name' => $order->buyer->name, 'products' => $seller_products, 'id' => $order->id, 'seller_name' => $order->seller->name];
             $order->validate(true);
-            $order->seller->notify(new NeworderNotification($mail_data));
+            $order->seller->notify(new NewOrderNotification($mail_data));
         }
         auth()->user()->cart->emptyCart(auth()->user()->id);
         return response()->json("Order Initiated");
@@ -65,6 +65,7 @@ class OrderController extends Controller
 
     public function devalidate(Order $order)
     {
+        if($order->seller()->id === auth()->user()->id || auth()->user()->isAdmin())
         $order->devalidate(false);
         foreach ($order->products as $product) {
             $product->changeQuantity($product->pivot->quantity);

@@ -19,9 +19,14 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'address', 'age', 'county_id', 'image', 'phone'
+        'name', 'email', 'password', 'address', 'age', 'county_id', 'image', 'phone', 'is_admin'
     ];
 
+    /**
+     * The attributes that will be encrypted.
+     *
+     * @var array
+     */
     protected $encryptable = [
         'name', 'address', 'age', 'phone'
     ];
@@ -66,6 +71,10 @@ class User extends Authenticatable
 
     public function cart(){
         return $this->hasOne(Cart::class, 'user_id', 'id');
+    }
+
+    public function isAdmin(){
+        return $this->is_admin;
     }
 
 }
