@@ -13,6 +13,12 @@ class UsersController extends Controller
         return response()->json($products);
     }
 
+    public function sells()
+    {
+        $orders = auth()->user()->sells;
+        return response()->json($orders);
+    }
+
     public function buys()
     {
         $products = collect([]);

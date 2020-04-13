@@ -33,6 +33,7 @@ Route::group(['middleware' => ['auth:api']], function(){
     Route::post('/orders/{order}/devalidate', 'OrderController@devalidate');
     Route::get('/orders/{order}', 'OrderController@show');
     Route::get('/user/products', 'UsersController@products');
+    Route::get('/user/sells', 'UsersController@sells');
     Route::get('/user/buys', 'UsersController@buys');
     Route::put('/user/update', 'UsersController@update');
     Route::post('/cart/add-product', 'CartController@add');
