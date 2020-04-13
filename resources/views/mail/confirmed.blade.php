@@ -512,7 +512,7 @@
                                                                 style="Margin:0;padding-left:10px;padding-right:10px;padding-top:20px;padding-bottom:30px;">
                                                                 <span class="es-button-border es-button-border-4"
                                                                       style="border-style:solid;border-color:transparent;background:#FAAE39;border-width:0px;display:inline-block;border-radius:5px;width:auto;"><a
-                                                                        href="{{env('REACT_APP_URL')}} letters/"
+                                                                        href="{{env('REACT_APP_URL')}} mailing/"
                                                                         class="es-button es-button-3" target="_blank"
                                                                         style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-size:18px;color:#FFFFFF;border-style:solid;border-color:#FAAE39;border-width:15px 30px;display:inline-block;background:#FAAE39;border-radius:5px;font-weight:bold;font-style:normal;line-height:22px;width:auto;text-align:center;">Send a letter!</a></span>
                                                             </td>

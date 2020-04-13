@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use App\Tag;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Types\Null_;
 
 class ProductsController extends Controller
 {
@@ -16,7 +17,7 @@ class ProductsController extends Controller
     public function index()
     {
         if (request('tag')) {
-            $products = Tag::where('name', request('tag'))->firstOrFail()->products->where('sold_out', 0);
+            $products = Tag::where('id', request('tag'))->firstOrFail()->products->where('sold_out', 0);
         } else {
             $products = Product::where('sold_out', 0)->get();
         }
@@ -25,7 +26,10 @@ class ProductsController extends Controller
             $product->tags;
         }
 
-        return response()->json($products, 200);
+        if($products !== null){
+            return response()->json($products, 200);
+        }
+        else return response()->json([]);
     }
 
     /**

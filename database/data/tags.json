@@ -1,30 +1,46 @@
 [
     {
-        "id": 1,
-        "name": "Animals"
+        "id": 99,
+        "name": ""
     },
     {
-        "id": 2,
+        "id": 1,
         "name": "Books"
     },
     {
-        "id": 3,
-        "name": "Food"
-    },
-    {
-        "id": 4,
+        "id": 2,
         "name": "Homemade"
     },
     {
-        "id": 5,
+        "id": 3,
         "name": "Clothing"
     },
     {
-        "id": 6,
+        "id": 4,
         "name": "Furniture"
     },
     {
-        "id": 7,
+        "id": 5,
         "name": "Cars"
+    },
+    {
+        "id": 6,
+        "name": "Tools"
+    },
+    {
+        "id": 7,
+        "name": "Jewelry"
+    },
+    {
+        "id": 8,
+        "name": "Army"
+    },
+    {
+        "id": 9,
+        "name": "Technology"
+    },
+    {
+        "id": 10,
+        "name": "Other"
     }
 ]
