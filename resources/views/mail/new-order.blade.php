@@ -428,7 +428,7 @@
                                                     style="Margin:0;padding-left:10px;padding-right:10px;padding-top:20px;padding-bottom:30px;">
                                                     <span class="es-button-border es-button-border-4"
                                                           style="border-style:solid;border-color:transparent;background:#FAAE39;border-width:0px;display:inline-block;border-radius:5px;width:auto;"><a
-                                                            href="{{env('REACT_APP_UTL')}}orders/{{$mail_data['id']}}" class="es-button es-button-3"
+                                                            href="{{env('REACT_APP_URL')}}orders/{{$mail_data['id']}}" class="es-button es-button-3"
                                                             target="_blank"
                                                             style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-size:18px;color:#FFFFFF;border-style:solid;border-color:#FAAE39;border-width:15px 30px;display:inline-block;background:#FAAE39;border-radius:5px;font-weight:bold;font-style:normal;line-height:22px;width:auto;text-align:center;">Check Order</a></span>
                                                 </td>
@@ -478,18 +478,8 @@
                                                                 width="50%" bgcolor="transparent"
                                                                 align="center"><a target="_blank"
                                                                                   style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;font-size:20px;text-decoration:none;display:block;color:#FFFFFF;"
-                                                                                  href=""><img
-                                                                        src="https://edqpsd.stripocdn.email/content/guids/CABINET_3298ab460a5df6a3e0eecc62d229ac13/images/45461585821288706.png"
-                                                                        alt title height="27"
-                                                                        align="absmiddle"
-                                                                        style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-bottom:5px;"><br></a>
-                                                            </td>
-                                                            <td style="Margin:0;padding-left:5px;padding-right:5px;padding-top:35px;padding-bottom:30px;border:0;"
-                                                                width="50%" bgcolor="transparent"
-                                                                align="center"><a target="_blank"
-                                                                                  style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;font-size:20px;text-decoration:none;display:block;color:#FFFFFF;"
-                                                                                  href=""><img
-                                                                        src="https://edqpsd.stripocdn.email/content/guids/CABINET_3298ab460a5df6a3e0eecc62d229ac13/images/62161585821323717.png"
+                                                                                  href="https://www.instagram.com/piazetaa/"><img
+                                                                        src="../../../public/instagramlogo.png"
                                                                         alt title height="27"
                                                                         align="absmiddle"
                                                                         style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-bottom:5px;"><br></a>
