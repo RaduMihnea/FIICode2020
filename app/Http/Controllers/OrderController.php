@@ -35,7 +35,6 @@ class OrderController extends Controller
                 if ($product->max_quantity === 0) $product->soldOut(true);
             }
             $mail_data = ['buyer_name' => $order->buyer->name, 'products' => $seller_products, 'id' => $order->id, 'seller_name' => $order->seller->name];
-            $order->validate(true);
             $order->seller->notify(new NewOrderNotification($mail_data));
         }
         auth()->user()->cart->emptyCart(auth()->user()->id);
@@ -63,13 +62,22 @@ class OrderController extends Controller
         } else return response()->json("Unauthorized", 401);
     }
 
-    public function devalidate(Order $order)
+    public function validate(Order $order, Request $request)
     {
-        if ($order->seller()->id === auth()->user()->id || auth()->user()->isAdmin())
-            $order->devalidate(false);
-        foreach ($order->products as $product) {
-            $product->changeQuantity($product->pivot->quantity);
-            $product->soldOut(false);
+        $request->validate(['validation' => 'required']);
+        if ($order->seller()->id === auth()->user()->id || auth()->user()->isAdmin()) {
+            if($request['validation'] == false){
+                $order->validate(false);
+                foreach ($order->products as $product) {
+                    $product->changeQuantity($product->pivot->quantity);
+                    $product->soldOut(false);
+                }
+                return response()->json("Order Devalidated");
+            }
+            if($request['validation'] == true){
+                $order->validate(true);
+                return response()->json("Order Validated");
+            }
         }
     }
 
