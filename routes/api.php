@@ -30,6 +30,7 @@ Route::group(['middleware' => ['auth:api']], function(){
     Route::delete('/products/{product}', 'ProductsController@destroy');
     Route::post('/orders', 'OrderController@store');
     Route::post('/orders/{order}', 'OrderController@confirm');
+    Route::post('/orders/{order}/devalidate', 'OrderController@devalidate');
     Route::get('/orders/{order}', 'OrderController@show');
     Route::get('/user/products', 'UsersController@products');
     Route::get('/user/buys', 'UsersController@buys');

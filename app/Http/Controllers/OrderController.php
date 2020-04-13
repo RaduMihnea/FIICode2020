@@ -65,8 +65,8 @@ class OrderController extends Controller
 
     public function devalidate(Order $order)
     {
-        if($order->seller()->id === auth()->user()->id || auth()->user()->isAdmin())
-        $order->devalidate(false);
+        if ($order->seller()->id === auth()->user()->id || auth()->user()->isAdmin())
+            $order->devalidate(false);
         foreach ($order->products as $product) {
             $product->changeQuantity($product->pivot->quantity);
             $product->soldOut(false);
