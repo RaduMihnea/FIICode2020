@@ -75,7 +75,8 @@ class OrderController extends Controller
 
     public function show(Order $order)
     {
-        return response()->json(['products' => $order->products, 'seller_id' => $order->seller->id, 'buyer' => ['name' => $order->buyer->name, 'county' => $order->buyer->county->name]]);
+        $order->products;
+        return response()->json(['order' => $order, 'buyer' => ['name' => $order->buyer->name, 'county' => $order->buyer->county->name]]);
     }
 
     public function group_by($key, $data)
