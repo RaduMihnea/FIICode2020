@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
@@ -60,6 +61,9 @@ class LoginController extends Controller
         return response()->json('Invalid credentials', 422);
     }
 
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function logout(){
         $accessToken = auth()->user()->token();
         DB::table('oauth_refresh_tokens')
