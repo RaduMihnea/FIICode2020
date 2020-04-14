@@ -61,9 +61,12 @@ class LoginController extends Controller
     }
 
     public function logout(){
-        foreach (auth()->user()->tokens as $token) {
-            $token->revoke();
-        }
-        return response()->json('Logged out');
+        $accessToken = auth()->user()->token();
+        DB::table('oauth_refresh_tokens')
+            ->where('access_token_id', $accessToken->id)
+            ->update(['revoked' => true]);
+
+        $accessToken->revoke();
+        return response()->json("Logout successful");
     }
 }

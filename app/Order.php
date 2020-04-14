@@ -35,7 +35,7 @@ class Order extends Model
         $this->save();
     }
 
-    public function validate($status)
+    public function validation($status)
     {
         $this->validated = $status;
         $this->save();

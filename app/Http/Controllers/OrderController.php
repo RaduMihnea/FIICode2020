@@ -2,16 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\NeworderMail;
 use App\Notifications\NewOrderNotification;
 use App\Notifications\orderConfirmationNotification;
 use App\Notifications\orderDeniedNotification;
-use App\Product;
 use App\Order;
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
-use function MongoDB\BSON\toJSON;
 
 class OrderController extends Controller
 {
@@ -67,7 +63,7 @@ class OrderController extends Controller
         $request->validate(['validation' => 'required']);
         if ($order->seller()->id === auth()->user()->id || auth()->user()->isAdmin()) {
             if($request['validation'] == false){
-                $order->validate(false);
+                $order->validation(false);
                 foreach ($order->products as $product) {
                     $product->changeQuantity($product->pivot->quantity);
                     $product->soldOut(false);
@@ -75,7 +71,7 @@ class OrderController extends Controller
                 return response()->json("Order Devalidated");
             }
             if($request['validation'] == true){
-                $order->validate(true);
+                $order->validation(true);
                 return response()->json("Order Validated");
             }
         }
