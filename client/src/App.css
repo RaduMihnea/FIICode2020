@@ -1,0 +1,1264 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.no-background {
+    background: none ! important;
+}
+
+.no-margin {
+    margin: 0 ! important;
+    padding: 0 ! important;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.no-shadow {
+    box-shadow: none !important;
+}
+
+.font-main {
+    font-family: Franchise;
+}
+
+.font-secondary {
+    font-family: Serif;
+}
+
+.font-third {
+    font-family: Retroholic;
+}
+
+.color-primary {
+    color: white;
+}
+
+.background-primary{
+    background-color: #edd294 !important;
+}
+
+.title-image {
+    width: 75%;
+    height: 100%;
+}
+
+.input-secondary {
+    background-color: burlywood;
+    border-radius: 5px;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pagina harta google */
+.container_mapa_google {
+  top: 8vh;
+  height: 45vh;
+}
+
+.dropdown_container {
+    width: fit-content;
+    height: 5vw;
+    font-size: 60px;
+    justify-content: center;
+    margin-bottom: 1vw;
+    color: white;
+    font-family: retroholic;
+    padding-left: 1vw;
+    position: absolute;
+    top: 8vw;
+    left: 15vw;
+
+}
+.sp_gol{
+    width: 100%;
+    height: 100px;
+}
+.background_map_page {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background_map_page img {
+    max-width: 100%;
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.add-remove {
+    display: inline-flex;
+}
+
+.arrowup {
+    height: 40px;
+    width: 50px;
+}
+
+.arrowup img {
+    width: 100%;
+    height: 100%;
+}
+
+.arrowdown {
+    height: 40px;
+    width: 61px;
+}
+
+.bara_meniuri {
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    height: 6vw;
+    background: saddlebrown;
+    display: none;
+}
+
+.titlu_pagina_harta {
+    height: 70px;
+    width: fit-content;
+    top: 3vw;
+    color: black;
+    font-size: 60px;
+    font-family: Retroholic;
+}
+
+.element_dropdown {
+    position: relative;
+    z-index: 333;
+    display: flex;
+    color: black;
+    margin-top: 0.5vw;
+    background-color: beige;
+    height: 2.2vw;
+    font-size: 2vw;
+    padding-left: 1vw;
+}
+
+.sidebar {
+    max-width: 240px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: darkred;
+    color: whitesmoke;
+    height: 100%;
+    top: 0;
+    width:190px;
+}
+
+.sidebar-subitem-text {
+    font-size: 0.8rem;
+}
+
+
+/* pentru produse si cart */
+
+.checkout button {
+    width: 160px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 8px;
+    background-color: darkred;
+    color: white;
+    font-family: serif;
+
+
+}
+.cart_titlu{
+    font-family: serif;
+    font-size: 40px;
+}
+.cart_titlu ul{
+    font-size: 20px;
+}
+
+.card-content span img{
+height: 30px;
+width: 30px;
+margin-bottom: -6px;
+margin-left: 10px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10%;
+    flex-wrap: wrap
+}
+
+.material-icons {
+    font-size: 2.4em;
+    cursor: pointer;
+
+}
+
+.product_image {
+    max-width: 100px !important;
+    max-height: 100px !important;
+}
+
+.product_image_single {
+    max-width: 300px !important;
+    max-height: 300px !important;
+}
+
+.button_image {
+    max-width: 33px;
+    max-height: 33px;
+}
+
+.material-icons img {
+    width: 58px;
+    height: 42px;
+}
+.remove_cart img{
+    width: 55px;
+    height: 42px;
+}
+.item-img{
+    height: 230px;
+    width: 275px;
+}
+.item-img img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card {
+    margin: 10px;
+    height: 300px;
+    max-height: 300px;
+}
+
+.card .card-image .card-title {
+    color: black;
+}
+
+.cart {
+    margin-top: 40px;
+}
+
+.collection .collection-item {
+    display: flex;
+}
+
+.collection-item.avatar .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ee6e73;
+    display: block;
+    margin-bottom: 20px;
+
+}
+
+.collection .collection-item img {
+    padding-right: 20px;
+}
+
+.item-desc {
+    align-self: center;
+}
+
+.brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    display: block;
+}
+
+.nav-wrapper {
+    height: 64px;
+    line-height: 64px;
+
+}
+
+.right {
+    float: right !important;
+    display: inline-flex;
+    margin-top: 0px;
+}
+
+.right li {
+    list-style-type: none;
+    margin-right: 20px;
+    font-family: initial;
+    font-size: 20px;
+}
+
+.container {
+    font-size: 20px;
+}
+
+.center_title {
+    font-size: 7.92rem;
+    line-height: 110%;
+    margin: 1.9466666667rem 0 1.168rem 0;
+    text-align: center;
+    width: max-content;
+    margin-right: auto;
+    margin-left: auto;
+    color: White;
+    font-family: Franchise;
+}
+
+.card-title {
+    font-size: x-large;
+    font-weight: 700;
+    color: wheat;
+}
+
+.card-content {
+    color: darkred;
+}
+
+.App {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* background-image: url("./assets/images/retro-wallpaper-1.jpg"); */
+}
+
+.container_register form {
+    display: inline-grid;
+    width: 100%;
+    height: 100%;
+}
+
+.container_register {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 45px;
+}
+
+.input-button-main {
+    width: 50%;
+    background-color: darkred;
+    color: white;
+    border-radius: 15px;
+    height: 32px;
+    font-size: large;
+    font-family: serif;
+}
+
+.input-main {
+    font-size: large;
+    margin-bottom: 13px;
+    height: 100%;
+    background-color: burlywood;
+    border-radius: 5px;
+    font-family: serif;
+    width: 90%;
+}
+
+.titlu_pagina_auth {
+    z-index: 10;
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+    padding-top: 33px;
+    color: ghostwhite;
+    font-family: serif;
+
+}
+
+.container_titlu_auth {
+    width: 210px;
+    height: 105px;
+    margin: auto auto;
+    top: 25px;
+    position: relative;
+}
+
+.container_titlu_auth img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.politici input {
+    height: auto;
+
+}
+
+.politici {
+    display: inline-flex;
+}
+
+/* HOMEPAGE */
+
+.homepage_title {
+    font-family: Retroholic;
+    font-size: 100px;
+    position: absolute;
+    left: 20%;
+    top: 5%;
+    color: whitesmoke;
+}
+
+.container_placi {
+    width: 450px;
+    height: 325px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 174px;
+}
+
+.container_buton {
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    height: 25%;
+    width: 50%;
+    left: 0;
+    top: 0;
+}
+
+.container_buton2 {
+    position: absolute;
+    height: 25%;
+    width: 50%;
+    right: 0;
+    top: 0;
+}
+
+.container_buton3 {
+    position: absolute;
+    height: 25%;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+}
+
+.container_buton4 {
+    position: absolute;
+    height: 25%;
+    width: 50%;
+    right: 0;
+    bottom: 0;
+}
+
+.container_buton1 img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.container_buton2 img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.container_buton3 img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.container_buton4 img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.text_home_button {
+    z-index: 333;
+    position: relative;
+    top: 31%;
+    font-size: 49px;
+    color: whitesmoke;
+    font-weight: 400;
+    font-family: Retroholic;
+}
+
+.text_dr_sus {
+    right: 25px;
+    top: 5px;
+    position: absolute;
+    font-weight: 500;
+    color: whitesmoke;
+    font-size: 18px;
+}
+.card-image{
+    display:inline-grid;
+}
+.product_image_container{
+    width: 320px;
+    height: 240px;
+}
+.card-image img {
+    max-width: 100%;
+    /* max-height: 100%; */
+    vertical-align: middle;
+    height: 90%;
+}
+.description_product{
+    overflow-y: auto;
+    height: 60px;
+    width: 320px;
+    margin: auto;
+   
+}
+
+.sale::-webkit-scrollbar {
+    display: none;
+  }
+
+/* .titlu_products::-webkit-scrollbar {
+    display: none;
+  } */
+.titlu_products{
+    overflow: hidden;
+    height: 35px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.description-product_products::-webkit-scrollbar {
+    display: none;
+  }
+
+.description_product::-webkit-scrollbar {
+    display: none;
+  }
+
+/* ADAUGA PRODUS */
+
+.container_add_product {
+    width: 350px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 90px;
+}
+
+.container_add_product form {
+    display: inline-grid;
+    width: 100%;
+    height: 100%;
+}
+
+.container_add_product input {
+    font-size: 16px;
+    margin-bottom: 19px;
+    height: 30px;
+    background-color: burlywood;
+    border-radius: 5px;
+    font-family: serif;
+}
+
+.container_add_product button {
+    background-color: darkred;
+    color: white;
+    border-radius: 15px;
+    height: 32px;
+    font-size: large;
+    font-family: serif;
+}
+
+.title_addarticles {
+    font-family: serif;
+    font-size: 30px;
+    margin-top: 25px;
+    font-weight: 600;
+    color: blanchedalmond;
+}
+
+.add_product_bifa {
+    display: inline-flex;
+}
+
+.add_product_bifa input {
+    height: auto;
+}
+
+.container_add_product label {
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 19px;
+}
+
+.container_add_product select {
+    height: 30px;
+    background-color: burlywood;
+    margin-left: 5px;
+}
+
+.container_register label {
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 19px;
+}
+
+.container_register select {
+    height: 30px;
+    background-color: burlywood;
+    margin-left: 5px;
+}
+
+.input_image input {
+    background: none;
+    font-weight: 800;
+}
+
+.input_image {
+    text-align: left;
+}
+
+.sgproduct_container {
+    width: 375px;
+    height: 100%;
+    text-align: left;
+    font-size: 20px;
+    font-family: serif;
+    background-color: darkcyan;
+    padding-left: 15px;
+    padding-right: 5px;
+
+}
+
+.sgproduct_title {
+
+    display: inline-flex;
+}
+
+.sgproduct_containertext {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    overflow-y: auto;
+}
+
+.sgproduct_containertext button {
+    width: 60px;
+}
+
+.sgproduct_titleart {
+    margin-bottom: 15px;
+    font-size: 32px;
+    padding-top: 15px;
+}
+
+.sgproduct_conditionals {
+    margin-bottom: 15px;
+    
+}
+
+.sgproduct_contact_button img {
+    width: 50px;
+    height: 100%;
+}
+
+.sgproduct_contact_button {
+    height: 47px;
+    display: inline-flex;
+}
+
+.sgproduct_button_text {
+    height: fit-content;
+    align-self: center;
+    padding-right: 5px;
+}
+
+.container_sgrpoduct_total {
+    position: absolute;
+    top: 15%;
+    left: 22%;
+    height: 360px;
+    display: inline-flex;
+}
+
+.image_container_sgproduct {
+    height: 100%;
+    width: 375px;
+    margin-left: 100px;
+
+    align-self: center;
+}
+
+.image_container_sgproduct img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.element_lista a {
+    color: white;
+    text-decoration: none;
+}
+
+.buton_remove_article img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.buton_remove_article {
+    width: 75px;
+    height: 75px;
+    padding-left: 20px;
+}
+
+.buton_edit_article {
+    width: 63px;
+    height: 70px;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+.buton_edit_article img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.register_spatiu_erori {
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    font-family: serif;
+    font-weight: 600;
+    font-size: large;
+}
+
+.login_spatiu_erori {
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    font-family: serif;
+    font-weight: 600;
+    font-size: large;
+}
+
+.logout_message {
+    font-size: 15px;
+    font-family: serif;
+    padding-top: 96px;
+}
+
+.hover_sold{
+    background-color: beige;
+    padding: 6px;
+    font-family: serif;
+    position: absolute;
+    top: 54%;
+    width: 210px;
+    right: -25%;
+}
+
+.hover_edit{
+    background-color: beige;
+    padding: 6px;
+    font-family: serif;
+    position: absolute;
+    top: 100%;
+    width: 210px;
+}
+
+.hover_remove{
+    background-color: beige;
+    padding: 6px;
+    font-family: serif;
+    position: absolute;
+    top: 100%;
+    width: 210px;
+}
+
+/* PROFILE */
+
+.container_user_info_profile{
+    width: 100%;
+    height: 35vh;
+    border-radius: 5px;
+    display: inline-flex;
+    margin-top:3vh;
+    background-color: cornsilk;
+    /* background-image:url("../src/assets/images/Icons/template.png"); */
+}
+.container_date_profile{
+    display: inline-grid;
+    height: 100%;
+    padding-top: 15px;
+}
+.container_imagine_profile{
+    width: 230px;
+    height: auto;
+    display: block;
+    padding: 5px;
+}
+.container_imagine_profile img{
+    width: 100%;
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+.info_user_text{
+    align-items: center;
+    text-align: left;
+    font-weight: 600;
+    display: inline-flex;
+}
+.info_user_text div{
+    align-self: center;
+}
+.info_user_text input{
+    width: 160px;
+}
+.info_user_text img{
+    height: 25px;
+    padding-left: 10px;
+    align-self: center;
+    padding-right: 10px;
+}
+.status_user{
+    height: fit-content;
+    margin-top: 20px;
+}
+
+.container_tranzactii{
+    width: 100%;
+    height: 300px;
+    background-color: cornsilk;
+    margin-top: 3vh;
+    border-radius: 5px;
+}
+.titlu_tranzactii{
+    height: fit-content;
+    width: 100%;
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: large;
+    font-family: serif;
+}
+.container_ultimele_tranzactii{
+    width: 100%;
+    height: 260px;
+    padding-top: 10px;
+    overflow-y: auto;
+}
+.tranzactie{
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    font-weight: 500;
+    margin-top: 15px;
+}
+.no_products_added img{
+    height: 25px;
+    margin-left: 10px;
+}
+.nume{
+    margin-left: 20px;
+    max-width: 120px;
+}
+
+/* SALE CONFIRMATION */
+.confirmation_title{
+    font-family: serif;
+    font-size: 20px;
+    margin-top: 5%;
+    font-weight: 600;
+}
+.info_tranzactie_confirmation{
+    height: 500px;
+    background-color: beige;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-radius: 10px;
+}
+.buyer_info{
+    width: 100%;
+    height: 200px;
+    display: inline-table;
+    text-align: left;
+    font-family: serif;
+}
+.product_info{
+    width: 100%;
+    height: 250px;
+    display: inline-table;
+    text-align: left;
+    font-family: serif;
+}
+.container_agree_transaction{
+    margin-top: 2%;
+}
+.container_butoane_agree_transaction button{
+    border-radius: 11px;
+    margin: 10px;
+    font-size: 16px;
+    background: darkred;
+    color: white;
+}
+
+.text_agree_transaction{   
+     font-size: 17px;
+    font-weight: 700;
+}
+.logo_piazeta_confirmation{
+    font-family: Retroholic;
+    font-size: 48px;
+}
+.product_row{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 20px;
+}
+.product_row_title{
+    font-size: 23px;
+    font-weight: 700;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.review_app{
+    display: inline-grid;
+    margin-top: 18%;
+    font-family: serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+.review_stars{
+    display: inline-block;
+    width: 100px;
+    position: relative;
+    margin: auto;
+}
+
+.titlu_app_sidebar{
+    font-family: Retroholic;
+    font-size: 60px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left:10px;
+}
+.chatbot{
+    position: absolute;
+    right: 5%;
+    bottom: 4%;
+}
+.productsFilters select{
+    padding-left: 2px;
+    margin-left: 10px;
+}
+.productsFilters{
+    display: flex;
+    margin-bottom: 20px;
+    font-family: serif;
+}
+
+/* RESET PASSWORD */
+
+.forgot-password-title{
+    font-size: 65px;
+    font-family: retroholic;
+    margin-top: 5%;
+}
+.forgot-password form{
+    display: inline-grid;
+    margin-top: 50px;
+}
+.forgot-password input{
+    margin-top: 15px;
+    width: 280px;
+    padding: 2px;
+    height: 20px;
+    background-color: navajowhite;
+    border-radius: 5px;
+}
+.forgot-password button{
+    margin-top: 10px;
+    width: 160px;
+    border-radius: 10px;
+    justify-self: center;
+    background-color: darkred;
+    color: white;
+    font-weight: 700;
+    height: 25px;
+}
+
+.forgot_password_spatiu_erori {
+        width: 100%;
+        height: 30px;
+        padding-top: 10px;
+        font-family: serif;
+        font-weight: 600;
+        font-size: large;
+}
+
+/* FORGOT PASSWORD */
+
+.reset_password_title{
+    font-size: 65px;
+    font-family: retroholic;
+    margin-top: 5%;
+}
+
+.reset-password form{
+    display: inline-grid;
+    margin-top: 30px;
+}
+
+.reset-password button{
+    margin-top: 20px;
+    width: 160px;
+    border-radius: 10px;
+    justify-self: center;
+    background-color: darkred;
+    color: white;
+    font-weight: 700;
+    height: 25px;
+}
+.reset_password_text{
+    font-family: serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+.reset-password{
+    width: 330px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 45px;
+}
+.reset-password input{
+    border-radius: 10px;
+    padding: 3px;
+    width: 230px;
+}
+
+.reset_password_mesaj {
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    font-family: serif;
+    font-size: large;
+}
+.login_forgot_password{
+    font-family: serif;
+    margin-top: 12px;
+
+}
+.mesaj_not_your_order{
+    font-size: 25px;
+    margin-top: 10%;
+    font-weight: 500;
+    font-family: serif;
+}
+.goback_not_your_order{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.container_produse_confirm_sale{
+    height: 178px;
+    overflow-y: scroll;
+}
+.product_row_product_title{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.mailing{
+    margin-top: 3%;
+    height: 100%;
+    width: 100%;
+}
+.mailing_title{
+    font-size: 60px;
+    font-family: Retroholic;
+}
+.mailing_paragraph{
+    font-family: retroholic;
+    font-size: 40px;
+    margin-top: 25px;
+}
+.mailing_paragraph_content{
+    font-size: 21px;
+    text-align: left;
+    text-indent: 50px;
+    font-family: serif;
+}
+.spacer {
+    padding-top: 20px;
+    /* padding-bottom: 25px;*/
+} 
+.list_element{
+    text-align: left;
+    
+    font-size: 17px;
+    margin-top: 10px;
+    font-family: serif;
+}
+.li{
+    font-size: 18px;
+    text-align: left;
+   
+    font-family: serif;
+    margin-top: 7px;
+
+}
+.spatiu_gol_profile{
+    height: 45px;
+}
+.spatiu_gol{
+    height: 60px;
+}
+.spatiu_gol_mailing{
+    height: 100px;
+}
+.spatiu_gol_add_product{
+    height: 80px;
+}
+
+.sp_gol_sgproduct{
+    height:80px;
+}
+
+@media screen and (min-width: 1024px) {
+    .sp_gol_sgproduct { display: none; }   /* hide it elsewhere */
+  }
+
+.footer_mailing{
+    font-size: 18px;
+    font-family: serif;
+    margin-bottom: 10px;
+}
+
+.mailing a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500
+}
+.text_mobile_device{
+    width: 100%;
+    text-align: center;
+    font-family: Retroholic;
+    font-size: 35px;
+}
+.logo_mobile_devices{
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    font-family: Retroholic;
+    font-size: 60px;
+}
+.text_stay_tuned{
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    font-family: Retroholic;
+    font-size: 35px;
+}
+.mobile_dev{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.bottom_buttons{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    font-family: serif;
+    z-index: 99;
+    background-color: maroon;
+}
+.bottom_buton{
+    margin: auto;
+    width: 20%;
+}
+.textarea_add_product{
+    background-color: burlywood;
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 19px;
+    font-family: serif;
+    font-size: 16px;
+}
+.bottom_buton img{
+    height: 40px;
+    width: 40px;
+}
+.button_bottom_text{
+    color: white;
+    font-size:65%;
+}
+.titlu_mailing{
+    font-family: Retroholic;
+    font-size: 60px;
+}
+.retro_app_total{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: inline-flex;
+}
+.home_icon_clicked{
+    filter: invert(100%) sepia(0%) saturate(3798%) hue-rotate(175deg) brightness(122%) contrast(112%);
+}
+.home_icon{
+    filter: invert(0%) sepia(85%) saturate(7500%) hue-rotate(299deg) brightness(81%) contrast(112%);
+}

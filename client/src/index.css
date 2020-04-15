@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+    font-family: 'Retroholic';
+    src: local('Retroholic'), url(assets/fonts/Retroholic-Demo.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Vintages';
+    src: local('Vintages'), url(assets/fonts/Vintages.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Franchise';
+    src: local('Franchise'), url(assets/fonts/Franchise.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Franchise-Filled';
+    src: local('Franchise-filled'), url(assets/fonts/FranchiseFilled.ttf) format('truetype');
+}
