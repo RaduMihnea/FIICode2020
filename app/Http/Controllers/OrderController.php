@@ -58,7 +58,7 @@ class OrderController extends Controller
         } else return response()->json("Unauthorized", 401);
     }
 
-    public function validate(Order $order, Request $request)
+    public function validation(Order $order, Request $request)
     {
         $request->validate(['validation' => 'required']);
         if ($order->seller()->id === auth()->user()->id || auth()->user()->isAdmin()) {
