@@ -101,7 +101,7 @@ export default class ProductsAdd extends Component {
             max_quantity:this.state.max_quantity
         }
 
-        if (this.state.bifa2 === true && this.state.county !== "99") {
+        if (this.state.bifa2 === true && this.state.county !== "99" && !isNaN(this.state.price) && !isNaN(this.state.price)) {
             
             axiosRequest.post("products", product)
                 .then(response => {
@@ -180,7 +180,8 @@ export default class ProductsAdd extends Component {
                         placeholder="Price(RON):"
                         value={this.state.price}
                         onChange={event => this.setState({price: event.target.value.replace(/\D/, '')})}
-                        required/>
+                        required
+                        />
                     
                     <label>Select county:
                         <select value={this.state.county.name} onChange={this.handleChange} name="county" style={{borderRadius:5}}>
@@ -212,7 +213,7 @@ export default class ProductsAdd extends Component {
                     </div>
 
 
-                    <button type="submit" onClick={this.handleSubmit}>Add your product</button>
+                    <button type="submit">Add your product</button>
 
                 </form>
                 <div className="spatiu_gol_add_product"></div>

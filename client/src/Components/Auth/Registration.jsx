@@ -88,7 +88,7 @@ export default class Registration extends Component {
             phone: this.state.phone_number
         }
 
-        if (this.state.password_confirmation === this.state.password) {
+        if (this.state.password_confirmation === this.state.password && !isNaN(this.state.age) && !isNaN(this.state.phone_number)) {
             axiosRequest.post("/register", user).then(response => {
                 console.log("registration res", response);
                 store.addNotification({
@@ -188,12 +188,11 @@ export default class Registration extends Component {
                                             className="input-main"
                                             type="text"
                                             name="username"
-                                            placeholder="Full Name"
+                                            placeholder="Full name"
                                             value={this.state.username}
                                             maxLength={24}
                                             onChange={this.handleChange}
                                             required/>
-
                                         <input
                                             className="input-main"
                                             type="text"
@@ -201,6 +200,7 @@ export default class Registration extends Component {
                                             placeholder="Phone number"
                                             value={this.state.phone_number}
                                             maxLength={10}
+                                            minLength={10}
                                             onChange={event => this.setState({phone_number: event.target.value.replace(/\D/, '')})}
                                             required/>
 

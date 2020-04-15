@@ -123,29 +123,30 @@ export default class Products extends Component {
         const text_compare = a.title.toLowerCase().localeCompare(b.title.toLowerCase());
         const date_compare = a.created_at.localeCompare(b.created_at);
 
-        if (this.state.filterCriteria === 2) {
+        if (this.state.filterCriteria == 2) {
             return date_compare;
         }
-        if (this.state.filterCriteria === 3 ||
-            this.state.filterCriteria === 1) {
+        if (this.state.filterCriteria == 3 ||
+            this.state.filterCriteria == 1) {
             return -1 * date_compare;
         }
-        if (this.state.filterCriteria === 4) {
+        if (this.state.filterCriteria == 4) {
             return diff;
         }
-        if (this.state.filterCriteria === 5) {
+        if (this.state.filterCriteria == 5) {
             return -1 * diff;
         }
-        if (this.state.filterCriteria === 6) {
+        if (this.state.filterCriteria == 6) {
             return text_compare;
         }
-        if (this.state.filterCriteria === 7) {
+        if (this.state.filterCriteria == 7) {
             return -1 * text_compare;
         }
     }
 
     render() {
-
+        console.log(this.state.filterCriteria);
+    
         let filteredData = this.state.produs.filter(
             (item) => {
                 return item.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;

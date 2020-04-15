@@ -555,9 +555,13 @@ margin-left: 10px;
     display: none;
   }
 
-/* .titlu_products::-webkit-scrollbar {
-    display: none;
-  } */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
 .titlu_products{
     overflow: hidden;
     height: 35px;
