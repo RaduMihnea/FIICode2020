@@ -1,0 +1,46 @@
+[
+  {
+    "id": 99,
+    "name": "No filter"
+  },
+  {
+    "id": 1,
+    "name": "Books"
+  },
+  {
+    "id": 2,
+    "name": "Homemade"
+  },
+  {
+    "id": 3,
+    "name": "Clothing"
+  },
+  {
+    "id": 4,
+    "name": "Furniture"
+  },
+  {
+    "id": 5,
+    "name": "Cars"
+  },
+  {
+    "id": 6,
+    "name": "Tools"
+  },
+  {
+    "id": 7,
+    "name": "Jewelry"
+  },
+  {
+    "id": 8,
+    "name": "Army"
+  },
+  {
+    "id": 9,
+    "name": "Technology"
+  },
+  {
+    "id": 10,
+    "name": "Other"
+  }
+]

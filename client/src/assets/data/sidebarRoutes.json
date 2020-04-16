@@ -1,0 +1,44 @@
+[
+  {
+    "name": "home",
+    "label": "Home"
+  },
+  {
+    "name": "profile",
+    "label": "Profile"
+  },
+  {
+    "name": "products/create",
+    "label": "Add product"
+  },
+  {
+    "name": "products",
+    "label": "Products"
+  },
+  {
+    "name": "cart",
+    "label": "Cart"
+  },
+  {
+    "name": "sales",
+    "label": "My sales"
+  },
+  {
+    "name": "mailing",
+    "label": "Retro mailing",
+    "items": [
+      {
+        "name": "mailing",
+        "label": "About letters"
+      },
+      {
+        "name": "map",
+        "label": "Send your letter!"
+      }
+    ]
+  },
+  {
+    "name": "about",
+    "label": "About us"
+  }
+]
