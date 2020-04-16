@@ -105,16 +105,16 @@ Piazeta reserves its right to eliminate any of the users who don’t follow the 
                         <Card interactive={false} elevation={Elevation.FOUR}
                               className="background-primary text-lg-left mb-3">
                             <div className="h3">The Future</div>
-                            <div className="p">Going so far and just giving up isn’t our way of doing things. That being said, we will continue to add different utilities to the website for the good of our users.  
+                            <div className="p">Going so far and just giving up isn’t our way of doing things. That being said, we will continue to add different functionalities to the website for the good of our users.  
                                 Our plan looks as follows: 
-                                <li style={{textAlign:'left'}}>a review system for users ( so you can better tell
+                                <li className="list_future">a review system for users ( so you can better tell
                                 whom you’re trading with )</li>
-                                <li style={{textAlign:'left'}}>a more advanced filtering possibility</li> 
-                                <li style={{textAlign:'left'}}>a wider range of
+                                <li className="list_future">a more advanced filtering possibility</li> 
+                                <li className="list_future">a wider range of
                                 notifications ( built in notifications on the website so you won’t have to check your
                                 mail every-time )</li>
-                                <li style={{textAlign:'left'}}>a built-in messaging system to eliminate any doubts about the product you’re buying or the person you’re selling to; </li>
-                                <li style={{textAlign:'left'}}>and many more… </li>
+                                <li className="list_future">a built-in messaging system to eliminate any doubts about the product you’re buying or the person you’re selling to </li>
+                                <li className="list_future">and many more… </li>
                                 As we said before, this is just an Alpha versions,
                                 there might still be things we’ll have to add, so please, send us an
                                 email without hesitation, we can’t wait to hear for your feedback.

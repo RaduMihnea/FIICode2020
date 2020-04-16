@@ -163,6 +163,7 @@ export default class Cart extends Component {
                     </div>
                     <div class="col-lg-1"/>
                 </div>
+                <div className="spatiu_gol-cart" style={{height:120}}/>
             </div>
         )
     }

@@ -40,7 +40,7 @@ export default class HomeMenu extends Component {
                         <div className="display-1 font-main color-primary text-lg-left">Piazeta</div>
                     </div>
                     <div className="col-sm-4 mt-3">
-                        <p className="text-sm-center font-main color-primary" style={{fontSize:25}}>Designed and created for FiiCODE 2020
+                        <p className="text-sm-center font-main color-primary text-logo-home" style={{fontSize:25}}>Designed and created for FiiCODE 2020
                             <a href="https://www.instagram.com/piazetaa/?hl=ro">
                                 <img src={IGlogo} style={{width:30, height:30, marginLeft:5}} alt="Logo"/>
 
@@ -52,6 +52,15 @@ export default class HomeMenu extends Component {
                 <div className="row h-75">
                     {this.props.isLoggedIn === false ? <HomeGuest /> : <HomeUser />}
                 </div>
+                <div className="col-sm-4 mt-2">
+                        <p className="text-sm-center font-main text-logo-home-mobile" style={{fontSize:25}}>Designed and created for FiiCODE 2020
+                            <a href="https://www.instagram.com/piazetaa/?hl=ro">
+                                <img src={IGlogo} style={{width:30, height:30, marginLeft:5}} alt="Logo"/>
+
+                            </a>
+                        </p>
+
+                    </div>
                 <div className="spatiu_gol"/>
                 {/*</div>*/}
                 {/*{ this.state.displayRating && this.props.isLoggedIn ?*/}

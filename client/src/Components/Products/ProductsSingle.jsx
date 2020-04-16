@@ -7,6 +7,7 @@ import edit_article from  '../../assets/images/Icons/Edit_product.png';
 import add_cart from '../../assets/images/Icons/Cart_add.png';
 import Moment from 'react-moment';
 import {store} from 'react-notifications-component';
+import back_button from '../../assets/images/Icons/Back-button.svg';
 
 const colors = ["#5c7329", "#548d78", "#c69421", "#cc6f22", "#8c2f0b"];
 
@@ -290,6 +291,13 @@ export default class ProductsSingle extends Component {
                                                 </div>
                                             </div>
                                             : "" }
+
+                                            <div className="col col-lg-12 no-margin">
+                                                <img className="w-100 h-100 button_image"
+                                                         src={back_button}
+                                                         alt="aback_button"
+                                                         onClick={()=>window.location.href='/products'}/>
+                                             </div>
                                         {this.state.product.seller_id !== this.props.user.id || this.props.user.is_admin
                                             ?
                                             <div className="col col-lg-12 no-margin">

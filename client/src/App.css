@@ -56,7 +56,7 @@
 }
 
 .input-secondary {
-    background-color: burlywood;
+    background-color: beige;
     border-radius: 5px;
 }
 
@@ -567,6 +567,7 @@ input[type=number]::-webkit-outer-spin-button {
     height: 35px;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-size: 1.65rem;
 }
 
 .description-product_products::-webkit-scrollbar {
@@ -576,6 +577,21 @@ input[type=number]::-webkit-outer-spin-button {
 .description_product::-webkit-scrollbar {
     display: none;
   }
+  
+@media only screen and (max-width: 960px) {
+  .text-logo-home{
+   display:none;
+   
+    }
+}
+@media only screen and (min-width: 980px) {
+.text-logo-home-mobile{
+    display:none;
+    color: black;
+
+}
+}
+
 
 /* ADAUGA PRODUS */
 
@@ -1114,6 +1130,10 @@ input[type=number]::-webkit-outer-spin-button {
     height: 178px;
     overflow-y: scroll;
 }
+.img_product{
+    height:60%;
+    max-width: 80%;
+}
 .product_row_product_title{
     text-align: left;
     margin-top: 20px;
@@ -1137,7 +1157,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 25px;
 }
 .mailing_paragraph_content{
-    font-size: 21px;
+    font-size: 19px;
     text-align: left;
     text-indent: 50px;
     font-family: serif;
@@ -1265,4 +1285,41 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .home_icon{
     filter: invert(0%) sepia(85%) saturate(7500%) hue-rotate(299deg) brightness(81%) contrast(112%);
+}
+.list_future:before{
+    content:"\2713";
+    color:green;
+}
+.list_future{
+    list-style:none;
+    text-align: left;
+    padding-left: 5px;
+}
+.list-mailing2{
+    list-style:none;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 17px;
+    font-family: serif;
+    padding-top: 5px;
+}
+.list-mailing2:before{
+    content:"\1F589";
+    color:black;
+    padding-right: 5px;
+}
+
+.list-mailing1{
+    list-style:none;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 17px;
+    font-family: serif;
+    padding-top: 5px;
+}
+
+.list-mailing1:before{
+    content:"\1F8A3";
+    color:black;
+    padding-right: 5px;
 }

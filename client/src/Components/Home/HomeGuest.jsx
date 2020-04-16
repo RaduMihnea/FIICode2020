@@ -18,24 +18,8 @@ export default class HomeGuest extends Component {
                 <div className="row w-100 h-auto">
                     <div className="d-flex justify-content-end col-lg-6 p-1 p-lg-3">
                         <div className="col-lg-6">
-                            <Link to="/register" >
-                                <img  src={CreateAccount} alt="createAccount"/>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="d-flex justify-content-start col-lg-6 p-1 p-lg-3">
-                        <div className="col-lg-6">
-                            <Link to="/Login">
-                                <img src={Login} alt="login"/>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="row w-100 h-auto">
-                    <div className="d-flex justify-content-end col-lg-6 p-1 p-lg-3">
-                        <div className="col-lg-6">
-                            <Link to="/products">
-                                <img src={Products} alt="products"/>
+                            <Link to="/products" >
+                                <img  src={Products} alt="products"/>
                             </Link>
                         </div>
                     </div>
@@ -43,6 +27,22 @@ export default class HomeGuest extends Component {
                         <div className="col-lg-6">
                             <Link to="/about">
                                 <img src={About} alt="about"/>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <div className="row w-100 h-auto">
+                    <div className="d-flex justify-content-end col-lg-6 p-1 p-lg-3">
+                        <div className="col-lg-6">
+                            <Link to="/register">
+                                <img src={CreateAccount} alt="createAccount"/>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="d-flex justify-content-start col-lg-6 p-1 p-lg-3">
+                        <div className="col-lg-6">
+                            <Link to="/login">
+                                <img src={Login} alt="login"/>
                             </Link>
                         </div>
                     </div>

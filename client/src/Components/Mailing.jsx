@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import {Card, Elevation} from "@blueprintjs/core"
+import {Card, Elevation} from "@blueprintjs/core";
+import post from "../assets/images/Postal-office.png";
+import post_office from "../assets/images/Postal_box.png";
 
 export default class Mailing extends Component {
 
@@ -13,7 +15,7 @@ export default class Mailing extends Component {
         return (
             <>
             <div className="container-fluid">
-                <div className="row">
+                <div className="row mt-3">
                     <div className="col 6">
                         <h className="titlu_mailing">How to send your letter correctly?</h>
                     </div>
@@ -24,7 +26,7 @@ export default class Mailing extends Component {
                     <div className="col-lg-8">
                         <Card interactive={false} elevation={Elevation.FOUR}
                               className="background-primary text-lg-left mb-3">
-                            <div className="row">
+                            <div className="row" style={{fontFamily:'serif'}}>
                                 <div className="col">
                                     <p className="mailing_paragraph mx-auto">Step 1: Writing the letter</p>
                                     <div className="mailing_paragraph_content px-2">Considering the purpose of our site
@@ -35,12 +37,12 @@ export default class Mailing extends Component {
                                         forget
                                         to include details about the transaction, such as:
                                     </div>
-                                    <li className="li px-2">Price and quantity</li>
-                                    <li className="li px-2">Shipping( way of shipping, shipping price and estimated
+                                    <li className="list-mailing1">Price and quantity</li>
+                                    <li className="list-mailing1">Shipping( way of shipping, shipping price and estimated
                                         time)
                                     </li>
-                                    <li className="li px-2">Include more details about the order if not clear</li>
-                                    <li className="li px-2">As a seller, you should give more details about the products
+                                    <li className="list-mailing1">Include more details about the order if not clear</li>
+                                    <li className="list-mailing1">As a seller, you should give more details about the products
                                         if
                                         requested
                                     </li>
@@ -89,27 +91,27 @@ export default class Mailing extends Component {
                                 include this elements:
                             </div>
 
-                            <li className="li px-2">Row 1: Last name & First name (the clear name, without
+                            <li className="list-mailing2">Row 1: Last name & First name (the clear name, without
                                 abbreviations, of
                                 the
                                 legal person).
                             </li>
-                            <li className="li px-2">Row 2: Street name followed by number of building or block,
+                            <li className="list-mailing2">Row 2: Street name followed by number of building or block,
                                 staircase,
                                 floor, apartment
                             </li>
-                            <li className="li px-2">Row 3: Postal code and locality (in capital letters). For the rural
+                            <li className="list-mailing2">Row 3: Postal code and locality (in capital letters). For the rural
                                 area,
                                 the locality is registered followed by the name of the commune to which it belongs.
                             </li>
-                            <li className="li px-2">Row 4: The county or sector(for Bucharest only). In the situation
+                            <li className="list-mailing2">Row 4: The county or sector(for Bucharest only). In the situation
                                 where
                                 the
                                 locality is a county residence and corresponds as a name with that of the county to
                                 which it
                                 belongs, it can be omitted.
                             </li>
-                            <li className="li px-2">Row 5: Country of recipient (in capital letters).</li>
+                            <li className="list-mailing2">Row 5: Country of recipient (in capital letters).</li>
                         </Card>
                         <Card interactive={false} elevation={Elevation.FOUR}
                               className="background-primary text-lg-left mb-3">
@@ -139,7 +141,9 @@ export default class Mailing extends Component {
                                 can
                                 check our map!
                             </div>
-                            <Link to="/map" style={{color: "red", fontWeight: 600}}>Find the closest postal
+                            <Link to="/map" style={{color: "red", fontWeight: 600, paddingTop:15}}>
+                                <img src={post} style={{height:25, paddingRight:7}}/>
+                                Find the closest postal
                                 office</Link>
                         </Card>
                         <Card interactive={false} elevation={Elevation.FOUR}
@@ -151,8 +155,9 @@ export default class Mailing extends Component {
                                 postal
                                 packages on the website of the Romanian Post:
                             </div>
-                            <a style={{color: "red", fontWeight: 600}} href="https://www.posta-romana.ro/">Just click
-                                here</a>
+                            <a style={{color: "red", fontWeight: 600}} href="https://www.posta-romana.ro/">
+                            <img src={post_office} style={{height:25, paddingRight:7}}/>
+                            Posta Romana</a>
                         </Card>
                     </div>
                     <div className="col-lg-2" />

@@ -4,6 +4,7 @@ import {Card, Elevation, Icon} from "@blueprintjs/core";
 import {store} from 'react-notifications-component';
 import tags from '../../assets/data/tags.json';
 import Loader from 'react-loader-spinner'; 
+import back_button from '../../assets/images/Icons/Back-button.svg';
 
 const filterCriterias = [
     {
@@ -114,6 +115,10 @@ export default class Products extends Component {
         }
     }
 
+    goBack=()=>{
+        this.props.history.goBack();
+    }
+
     updateSearch = (event) => {
         this.setState({search: event.target.value});
     }
@@ -161,10 +166,13 @@ export default class Products extends Component {
                     <div className="card no-margin" key={item.id}>
 
                         <Card interactive={false} elevation={Elevation.FOUR} className="background-primary h-100">
-                            <img className="w-50 h-50" src={item.image} alt=""/>
-                            <div className="titlu_products" ><a href={"/products/" + item.id} className="h4 font-main"
-                                    style={{color: colors[item.id % 5]}}>{item.title}</a></div>
-                            <p className="description-product_products" style={{overflow:'auto', height:75}}>{item.description}</p>
+                            <img className="img_product" src={item.image} alt=""/>
+                            <div className="titlu_products" ><a href={"/products/" + item.id} className="font-main"
+                                    style={{color: colors[item.id % 5]}}>{item.title}</a>
+                            </div>
+                            <p className="description-product_products" style={{overflow:'auto', height:40, fontFamily:'serif', fontSize:15}}>
+                                {item.description}
+                            </p>
                             <div class="container-fluid">
                                 <div class="row justify-content-center">
                                     <p className="color-primary">{item.price} RON </p>
@@ -191,10 +199,15 @@ export default class Products extends Component {
                 <div className="container h-10">
                     <h1 className="row font-main display-1 justify-content-center">Products</h1>
                     <div class="row mb-2">
-                        <div class="col-lg-4">
+                        <div class="col-lg-1">
+                            <div class="row justify-content-center">
+                                <img src={back_button} style={{height:30,marginBottom:10}} onClick={this.goBack} alt="back_products"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
                             <div class="row justify-content-center">
                                 <div className="productsFilters">
-                                    <label className="font-main">Sort by:
+                                    <label className="font-main" style={{marginRight:5}}>Sort by:
                                         <select className="font-secondary input-secondary"
                                                 value={this.state.filterCriteria}
                                                 onChange={this.handleChange}
