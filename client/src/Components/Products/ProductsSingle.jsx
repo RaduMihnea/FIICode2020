@@ -310,7 +310,6 @@ export default class ProductsSingle extends Component {
                                                 </div>
                                             </div>
                                             : ""}
-
                                     </div>
                                 </div>
                             </Card>

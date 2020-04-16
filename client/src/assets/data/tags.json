@@ -1,7 +1,11 @@
 [
   {
     "id": 99,
+<<<<<<< HEAD
     "name": "No filter"
+=======
+    "name": ""
+>>>>>>> cb5ed8769fc4f7cea454b53c7c90e518b2df9d00
   },
   {
     "id": 1,

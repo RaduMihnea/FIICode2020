@@ -56,7 +56,11 @@
 }
 
 .input-secondary {
+<<<<<<< HEAD
     background-color: beige;
+=======
+    background-color: burlywood;
+>>>>>>> cb5ed8769fc4f7cea454b53c7c90e518b2df9d00
     border-radius: 5px;
 }
 
@@ -567,7 +571,10 @@ input[type=number]::-webkit-outer-spin-button {
     height: 35px;
     text-overflow: ellipsis;
     white-space: nowrap;
+<<<<<<< HEAD
     font-size: 1.65rem;
+=======
+>>>>>>> cb5ed8769fc4f7cea454b53c7c90e518b2df9d00
 }
 
 .description-product_products::-webkit-scrollbar {
@@ -577,6 +584,7 @@ input[type=number]::-webkit-outer-spin-button {
 .description_product::-webkit-scrollbar {
     display: none;
   }
+<<<<<<< HEAD
   
 @media only screen and (max-width: 960px) {
   .text-logo-home{
@@ -592,6 +600,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 }
 
+=======
+>>>>>>> cb5ed8769fc4f7cea454b53c7c90e518b2df9d00
 
 /* ADAUGA PRODUS */
 
@@ -1130,10 +1140,13 @@ input[type=number]::-webkit-outer-spin-button {
     height: 178px;
     overflow-y: scroll;
 }
+<<<<<<< HEAD
 .img_product{
     height:60%;
     max-width: 80%;
 }
+=======
+>>>>>>> cb5ed8769fc4f7cea454b53c7c90e518b2df9d00
 .product_row_product_title{
     text-align: left;
     margin-top: 20px;
@@ -1157,7 +1170,11 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 25px;
 }
 .mailing_paragraph_content{
+<<<<<<< HEAD
     font-size: 19px;
+=======
+    font-size: 21px;
+>>>>>>> cb5ed8769fc4f7cea454b53c7c90e518b2df9d00
     text-align: left;
     text-indent: 50px;
     font-family: serif;
@@ -1285,6 +1302,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .home_icon{
     filter: invert(0%) sepia(85%) saturate(7500%) hue-rotate(299deg) brightness(81%) contrast(112%);
+<<<<<<< HEAD
 }
 .list_future:before{
     content:"\2713";
@@ -1323,3 +1341,6 @@ input[type=number]::-webkit-outer-spin-button {
     color:black;
     padding-right: 5px;
 }
+=======
+}
+>>>>>>> cb5ed8769fc4f7cea454b53c7c90e518b2df9d00
