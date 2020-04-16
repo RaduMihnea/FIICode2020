@@ -40,7 +40,9 @@ export default class ConfirmSale extends Component {
 
     handleClick=(status)=> {
         axiosRequest.post("orders/" + this.props.match.params.id, {confirmed: status})
-        .then(window.location.href='/products')
+        .then(response => {setTimeout(() => {
+            window.location.href='/products'
+        }, 2000)});
     }
 
     notSold=() =>{

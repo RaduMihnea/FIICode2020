@@ -324,7 +324,7 @@
                                    width="610" cellspacing="0" cellpadding="0" bgcolor="#044767" align="center">
                                 <tr style="border-collapse:collapse;">
                                     <td align="left" bgcolor="#faae39"
-                                        style="Margin:0;padding-top:35px;padding-left:35px;padding-right:35px;padding-bottom:40px;background-color:#FAAE39;">
+                                        style="Margin:0;padding-top:35px;padding-left:35px;padding-right:35px;padding-bottom:40px;background-color:#2ec943;">
                                         <table width="100%" cellspacing="0" cellpadding="0"
                                                style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;">
                                             <tr style="border-collapse:collapse;">
@@ -401,7 +401,7 @@
                                                                     href="{{env('REACT_APP_URL')}}products/{{$product['id']}}"
                                                                     style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;font-size:14px;text-decoration:none;color:#ED8E20;"><img
                                                                         class="adapt-img" src="{{$product['image']}}"
-                                                                        alt="Image"
+                                                                        alt="Image not visible on gmail"
                                                                         style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
                                                                         title="Item #1" width="262.796875"></a></td>
                                                         </tr>
@@ -580,7 +580,7 @@
                                                                             align="center"><a target="_blank"
                                                                                               style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;font-size:20px;text-decoration:none;display:block;color:#FFFFFF;"
                                                                                               href="https://www.instagram.com/piazetaa/"><img
-                                                                                    src="../../../public/instagramlogo.png"
+                                                                                    src="https://api.piazeta.com/instagramlogo.png"
                                                                                     alt title height="27"
                                                                                     align="absmiddle"
                                                                                     style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-bottom:5px;"><br></a>
