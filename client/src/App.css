@@ -1306,14 +1306,12 @@ input[type=number]::-webkit-outer-spin-button {
 .home_icon{
     filter: invert(0%) sepia(85%) saturate(7500%) hue-rotate(299deg) brightness(81%) contrast(112%);
 }
-.list_future:before{
-    content:"\2713";
-    color:green;
-}
+
 .list_future{
     list-style:none;
     text-align: left;
     padding-left: 5px;
+    list-style-image: url(https://img.icons8.com/color/17/000000/checkmark.png);
 }
 .list-mailing2{
     list-style:none;
@@ -1322,11 +1320,7 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 17px;
     font-family: serif;
     padding-top: 5px;
-}
-.list-mailing2:before{
-    content:"\1F589";
-    color:black;
-    padding-right: 5px;
+    list-style-image: url(https://img.icons8.com/carbon-copy/20/000000/pencil.png);
 }
 
 .list-mailing1{
@@ -1336,10 +1330,5 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 17px;
     font-family: serif;
     padding-top: 5px;
-}
-
-.list-mailing1:before{
-    content:"\1F8A3";
-    color:black;
-    padding-right: 5px;
+    list-style-image:url(https://img.icons8.com/windows/20/000000/arrow.png);
 }
