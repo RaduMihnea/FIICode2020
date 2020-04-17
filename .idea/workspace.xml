@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cee2dcbe-6117-4f4c-81fb-07924243a68c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Readme.md" afterPath="$PROJECT_DIR$/Readme.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/README.md" afterPath="$PROJECT_DIR$/client/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/README.md" afterPath="$PROJECT_DIR$/server/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/database/seeds/AdminSeeder.php" afterPath="$PROJECT_DIR$/server/database/seeds/AdminSeeder.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -87,8 +86,8 @@
         <entry file="file://$PROJECT_DIR$/client/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="184">
-                <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <first_editor relative-caret-position="138">
+                <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -120,8 +119,8 @@
         <entry file="file://$PROJECT_DIR$/Readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="92">
-                <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="30" />
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -158,9 +157,9 @@
         <option value="$PROJECT_DIR$/server/app/Http/Controllers/OrderController.php" />
         <option value="$PROJECT_DIR$/server/config/app.php" />
         <option value="$PROJECT_DIR$/server/database/seeds/AdminSeeder.php" />
-        <option value="$PROJECT_DIR$/client/README.md" />
         <option value="$PROJECT_DIR$/server/README.md" />
         <option value="$PROJECT_DIR$/Readme.md" />
+        <option value="$PROJECT_DIR$/client/README.md" />
       </list>
     </option>
   </component>
@@ -751,11 +750,18 @@
       <option name="project" value="LOCAL" />
       <updated>1587133385786</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Updated Readme files">
+      <created>1587133856192</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587133856192</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12949000" />
+    <option name="totallyTimeSpent" value="13053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -834,7 +840,8 @@
     <MESSAGE value="Validation Route bug" />
     <MESSAGE value="changed timezone" />
     <MESSAGE value="Updated Readme files and Presentational video added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Readme files and Presentational video added" />
+    <MESSAGE value="Updated Readme files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Readme files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1264,8 +1271,8 @@
     <entry file="file://$PROJECT_DIR$/Readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="92">
-            <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="30" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1275,8 +1282,8 @@
     <entry file="file://$PROJECT_DIR$/client/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="184">
-            <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <first_editor relative-caret-position="138">
+            <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
             <folding />
           </first_editor>
           <second_editor />
