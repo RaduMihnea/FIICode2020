@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axiosRequest from "axios";
+import axiosRequest from "../../Utils/axios";
 
 export default class ResetPassword extends Component {
     constructor() {
@@ -34,6 +34,7 @@ export default class ResetPassword extends Component {
             token: this.state.token
         }
         if (this.state.newPassword === this.state.confirmNewPassword) {
+            console.log(new_password_details)
             axiosRequest.post("password/reset", new_password_details).then(response => {
                 this.setState({mesaj: "Your new password is set, please log in!"})
                 setTimeout(()=>{window.location.href = '/home';}, 1000);
