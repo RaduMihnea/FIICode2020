@@ -292,15 +292,15 @@ export default class Profile extends Component {
                             {this.state.my_products.reverse().map((item) => {
                                 return (
                                     <div className="tranzactie">
-                                        <div className="col no-margin mr-1 ml-1">Product: {item.title}</div>
-                                        <div className="col no-margin mr-1 ml-1">Price: {item.price} RON</div>
-                                        <div className="col no-margin mr-1 ml-1">Published on: {" "}
+                                        <div className="col no-margin mr-1 ml-1 algn-self" >Product: {item.title}</div>
+                                        <div className="col no-margin mr-1 ml-1 algn-self" >Price: {item.price} RON</div>
+                                        <div className="col no-margin mr-1 ml-1 algn-self" >Published on: {" "}
                                             <Moment format="DD.MM.YYYY">{item.created_at}</Moment>
                                         </div>
                                         {!item.sold_out ?
-                                            <div className="col no-margin mr-1 ml-1">Status: Available</div>
+                                            <div className="col no-margin mr-1 ml-1 algn-self">Status: Available</div>
                                             :
-                                            <div className="col no-margin mr-1 ml-1">Status: Unavailable</div>
+                                            <div className="col no-margin mr-1 ml-1 algn-self">Status: Unavailable</div>
                                         }
                                     </div>
                                 )
@@ -333,14 +333,14 @@ export default class Profile extends Component {
 
                                                     <div className="tranzactie">
 
-                                                        <div className="col no-margin mr-1 ml-1">Product: {item.title}
+                                                        <div className="col no-margin mr-1 ml-1 algn-self">Product: {item.title}
                                                             ({item.pivot.quantity})
                                                         </div>
-                                                        <div className="col no-margin mr-1 ml-1l">
+                                                        <div className="col no-margin mr-1 ml-1l algn-self">
                                                             Price: {item.price * item.pivot.quantity}
                                                             RON
                                                         </div>
-                                                        <div className="col no-margin mr-1 ml-1">Bought on:{" "}
+                                                        <div className="col no-margin mr-1 ml-1 algn-self">Bought on:{" "}
                                                             <Moment format="DD.MM.YYYY">2020-03-29 14:37:19</Moment>
                                                         </div>
 

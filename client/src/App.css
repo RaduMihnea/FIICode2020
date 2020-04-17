@@ -87,7 +87,7 @@
 /* Pagina harta google */
 .container_mapa_google {
   top: 8vh;
-  height: 45vh;
+  height:60vh;
 }
 
 .dropdown_container {
@@ -958,11 +958,28 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 2%;
 }
 .container_butoane_agree_transaction button{
-    border-radius: 11px;
+    border-radius: 13px;
     margin: 10px;
     font-size: 16px;
     background: darkred;
     color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.date_produs img{
+    max-width: 100px;
+    max-height: 100px;
+    margin-left: 50px;
+    align-self: center;
+
+}
+
+@media only screen and (max-width: 980px) {
+    .date_produs img{
+        display:none;
+    
+    }
 }
 
 .text_agree_transaction{   
@@ -1181,11 +1198,14 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 7px;
 
 }
+.algn-self{
+    align-self: center;
+}
 .spatiu_gol_profile{
     height: 45px;
 }
 .spatiu_gol{
-    height: 60px;
+    height: 80px;
 }
 .spatiu_gol_mailing{
     height: 100px;

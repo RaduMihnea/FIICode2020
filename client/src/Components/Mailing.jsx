@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {Card, Elevation} from "@blueprintjs/core";
 import post from "../assets/images/Postal-office.png";
 import post_office from "../assets/images/Postal_box.png";
+import back_button from "../assets/images/Icons/Back-button.svg";
 
 export default class Mailing extends Component {
 
@@ -155,7 +156,7 @@ export default class Mailing extends Component {
                                 postal
                                 packages on the website of the Romanian Post:
                             </div>
-                            <a style={{color: "red", fontWeight: 600}} href="https://www.posta-romana.ro/">
+                            <a style={{color: "red", fontWeight: 600}} href="https://www.posta-romana.ro/" target="_blank" rel="noopener noreferrer">
                             <img src={post_office} style={{height:25, paddingRight:7}}/>
                             Posta Romana</a>
                         </Card>
@@ -163,6 +164,13 @@ export default class Mailing extends Component {
                     <div className="col-lg-2" />
                 </div>
             </div>
+            <div class="row mt-3 mb-2">
+                    <div class="col">
+                        <button style={{borderRadius:20, backgroundColor:'darkred', padding:5, width:100}} onClick={()=>this.props.history.goBack()}>
+                        <img src={back_button} style={{height:25}} />Return
+                        </button>
+                    </div>
+                </div>
             <div className="spatiu_gol_mailing"></div>
             </>
         )

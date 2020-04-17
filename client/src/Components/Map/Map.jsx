@@ -3,6 +3,7 @@ import {InfoWindow, Map, Marker, GoogleApiWrapper} from "google-maps-react";
 import judete from '../../assets/data/county.json'
 import oficii_post from '../../assets/data/postal_offices.json';
 import county_centres from '../../assets/data/county_centres.json';
+import back_button_map from '../../assets/images/Icons/Back-button.svg';
 
 export class MapContainer extends Component {
 
@@ -117,6 +118,13 @@ export class MapContainer extends Component {
                                 </div>
                             </InfoWindow>
                         </Map>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <button style={{borderRadius:20, backgroundColor:'darkred', padding:5, width:100}} onClick={()=>this.props.history.goBack()}>
+                        <img src={back_button_map} style={{height:25}} />Return
+                        </button>
                     </div>
                 </div>
             </div>

@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import axiosRequest from "../../Utils/axios";
 import Moment from "react-moment";
 import go_to_add_products from "../../assets/images/Icons/Cart_add.png";
+import wait_answer from "../../assets/images/Icons/Wait_answer.png";
 
 export default class MySales extends Component {
     constructor() {
@@ -25,6 +26,7 @@ export default class MySales extends Component {
     }
 
     render() {
+        console.log(this.state.sales)
         return (
             <div>
                 <div class="container-fluid mt-5">
@@ -45,15 +47,23 @@ export default class MySales extends Component {
                                     </div>
                                     
                                     <div class="col" style={{alignSelf:'center'}}>
+                                       <div class="row">
+                                       <div class="col">
                                        {item.validated===0 ?
-                                        
                                         <img src={NotSold} alt="not_sold" style={{height:25}}/>
                                         :
-                                        <img src={Sold} alt="sold" style={{height:25}}/>}
+                                        <img src={Sold} alt="sold" style={{height:25}}/>
+                                        }
+                                        </div>
+                                        <div class="col">
+                                         {item.confirmed==null ?
+                                        <img src={wait_answer} style={{height:25}}/>
+                                        : ""
+                                        }  
+                                        </div> 
+                                        </div>
+                                    </div>                                          
                                     </div>
-                                    
-                                    
-                                </div>
                                 )})}
                             </>
                             : 

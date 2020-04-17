@@ -7,6 +7,7 @@ import default_picture from '../../assets/images/Icons/ProfileDefault.png';
 import { store } from 'react-notifications-component';
 import back_button from '../../assets/images/Icons/Back-button.svg';
 import see_password from '../../assets/images/Icons/See_password.png';
+import bifa_poza from '../../assets/images/Checkmark.png';
 
 
 export default class Registration extends Component {
@@ -205,12 +206,14 @@ export default class Registration extends Component {
                                             required/>
 
                                         <div className="container-fluid font-secondary small" style={{marginBottom:5}}>
+                                            <label style={{fontFamily:'serif', fontSize:20}}>Profile picture:</label>
                                             <input
-                                                style={{width:200}}
+                                                style={{width:95}}
                                                 type="file"
                                                 onChange={this.onImageChange}
                                                 className="m-1 align-self-center"
                                                 id="user_image"/>
+                                            {this.state.image!== default_picture ? <img src={bifa_poza} style={{height:30}}/> : ""}
                                         </div>
 
                                         <input

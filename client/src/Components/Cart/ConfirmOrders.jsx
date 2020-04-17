@@ -3,6 +3,7 @@ import axiosRequest from "../../Utils/axios";
 import return_site from "../../assets/images/return_site.png";
 import Moment from 'react-moment';
 import { store } from 'react-notifications-component';
+import back_button from "../../assets/images/Icons/Back-button.svg";
 
 export default class ConfirmSale extends Component {
     constructor() {
@@ -33,7 +34,8 @@ export default class ConfirmSale extends Component {
                     products: res.data.order.products,
                     buyer: res.data.buyer,
                     order_date:res.data.order.created_at,
-                    confirmed: res.data.order.confirmed
+                    confirmed: res.data.order.confirmed,
+                    validation:res.data.order.validated
                 });
             })
     }
@@ -93,6 +95,7 @@ export default class ConfirmSale extends Component {
 
 
     render() {
+        console.log(this.state)
         return (
             this.state.products[0].seller_id!==this.props.user.id && !this.props.user.is_admin  ?
 
@@ -116,13 +119,17 @@ export default class ConfirmSale extends Component {
             <div className="info_tranzactie_confirmation">
                 <div className="product_info">
                     <div className="product_row_title">Product info:</div>
-                    <div className="container_produse_confirm_sale">
+                    <div className="container_produse_confirm_sale" style={{display:'inline-grid', width:'100%'}}>
                     {this.state.products.map((item,index)=>{return(
-                    <>
+                    <div className="date_produs" style={{display:'inline-flex'}}>
+                    
+                    <div>
                     <div className="product_row_product_title">{index+1}.Product name: {item.title}</div>
                     <div className="product_row">Quantity: {item.pivot.quantity}</div>
                     <div className="product_row">Total: {item.pivot.quantity * item.price} RON</div>
-                    </>
+                    </div>
+                    <img src={item.image}/>
+                    </div>
                     )})}
                     </div>
                 </div>
@@ -162,14 +169,16 @@ export default class ConfirmSale extends Component {
             <div class="row">
                 <div class="col">
                     <div className="container_agree_transaction">
-                        {this.state.validation===null ?
+                        {this.state.validation===null && this.state.confirmed===1 ?
                         <>
                             <div className="text_agree_transaction">Did you finalize the deal?</div>
                                 <div className="container_butoane_agree_transaction">
                                     <div class="row justify-content-center">
-                                        <div class="col xs-4 xl-4 text-right"><button onClick={this.productSold} >Yes</button></div>
-                                        <div class="col xs-4 xl-4 "><button onClick={this.notSoldYet} >Not yet</button></div>
-                                        <div class="col xs-4 xl-4 text-left"><button onClick={this.notSold}>No</button></div>
+                                        
+                                        <div class="c"><button onClick={this.productSold} >Yes</button></div>
+                                        <div class="c"><button onClick={this.notSoldYet} >Not yet</button></div>
+                                        <div class="c"><button onClick={this.notSold}>No</button></div>
+                                        
                                     </div>
                                 </div>
                         </>
@@ -178,6 +187,13 @@ export default class ConfirmSale extends Component {
                     </div>
                 </div>
             </div>
+            <div class="row mt-3 mb-2">
+                    <div class="col">
+                        <button style={{borderRadius:20, backgroundColor:'darkred', padding:5, width:100}} onClick={()=>this.props.history.goBack()}>
+                        <img src={back_button} style={{height:25}} />Return
+                        </button>
+                    </div>
+                </div>
             <div className="spatiu_gol"/>
         </div>
         )

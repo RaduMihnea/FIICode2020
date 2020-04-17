@@ -32,7 +32,7 @@ export default class AboutUs extends Component {
                     <div className="col-lg-8">
                         <Card interactive={false} elevation={Elevation.FOUR}
                               className="background-primary text-lg-left mb-3">
-                            <div className="h3">How does it work?</div>
+                            <div className="h3" style={{fontFamily:'Retroholic', fontSize:45}}>How does it work?</div>
                             <div className="p">The website's main page consists in a list of products that follows the retro theme. Here you can search for those pieces missing from your collection ( from posters, books to something even bigger, like a car!). Once you find them, you can place an order. The seller will receive an email about your order. He can  choose then whether to accept  or deny it. You’ll be notified by email about his choice: if he accepts it, you’ll receive his contact information. But be careful! He will receive yours as well, so no scamming can take place. 
 However, in order to use all our functionalities, you must first create an account. By creating one, you admit to giving out your TRUE personal information (don’t worry, we cannot see them :) ). They can later be used during the exchange of products. 
 Piazeta reserves its right to eliminate any of the users who don’t follow the Terms & Conditions imposed.                      
@@ -41,7 +41,7 @@ Piazeta reserves its right to eliminate any of the users who don’t follow the 
                         </Card>
                         <Card interactive={false} elevation={Elevation.FOUR}
                               className="background-primary text-lg-left mb-3">
-                            <div className="h3">The Reason</div>
+                            <div className="h3" style={{fontFamily:'Retroholic', fontSize:45}}>The Reason</div>
                             <div className="p">The website's main page consists in a list of products that follows the retro theme. Here you can search for those pieces missing from your collection ( from posters, books to something even bigger, like a car!). Once you find them, you can place an order. The seller will receive an email about your order. He can  choose then whether to accept  or deny it. You’ll be notified by email about his choice: if he accepts it, you’ll receive his contact information. But be careful! He will receive yours as well, so no scamming can take place. 
 However, in order to use all our functionalities, you must first create an account. By creating one, you admit to giving out your TRUE personal information (don’t worry, we cannot see them :) ). They can later be used during the exchange of products. 
 Piazeta reserves its right to eliminate any of the users who don’t follow the Terms & Conditions imposed.                      
@@ -50,7 +50,7 @@ Piazeta reserves its right to eliminate any of the users who don’t follow the 
                         </Card>
                         <Card interactive={false} elevation={Elevation.FOUR}
                               className="background-primary text-lg-left mb-3">
-                            <div className="h3">Who are we?</div>
+                            <div className="h3" style={{fontFamily:'Retroholic', fontSize:45}}>Who are we?</div>
                             <div className="p">The website's main page consists in a list of products that follows the retro theme. Here you can search for those pieces missing from your collection ( from posters, books to something even bigger, like a car!). Once you find them, you can place an order. The seller will receive an email about your order. He can  choose then whether to accept  or deny it. You’ll be notified by email about his choice: if he accepts it, you’ll receive his contact information. But be careful! He will receive yours as well, so no scamming can take place. 
 However, in order to use all our functionalities, you must first create an account. By creating one, you admit to giving out your TRUE personal information (don’t worry, we cannot see them :) ). They can later be used during the exchange of products. 
 Piazeta reserves its right to eliminate any of the users who don’t follow the Terms & Conditions imposed.                      
@@ -64,7 +64,7 @@ Piazeta reserves its right to eliminate any of the users who don’t follow the 
                                                 <img className="img-fluid img-thumbnail" src={Mihnea} alt="Lapu"/>
                                             </div>
                                             <div className="col-lg-7 text-lg-left">
-                                                <div className="h2">Radu Mihnea</div>
+                                                <div className="h2" style={{fontFamily:'Retroholic', fontSize:45}}>Radu Mihnea</div>
                                                 <div className="p">I’m an ambitious, calm, friendly and hungry to learn high-school senior. I’ve always been a technology lover. Since I  was little I loved to create stuff on my own and discover new things by playing on the computer. As the years passed by, the passion only kept growing and so did my will to learn.
                                                 </div>
                                                 <br/>
@@ -87,7 +87,7 @@ Piazeta reserves its right to eliminate any of the users who don’t follow the 
                                                 <img className="img-fluid img-thumbnail" src={Lapu} alt="Lapu"/>
                                             </div>
                                             <div className="col-lg-7 text-lg-left">
-                                                <div className="h2">Lapusneanu Andrei</div>
+                                                <div className="h2" style={{fontFamily:'Retroholic', fontSize:45}}>Lapusneanu Andrei</div>
                                                 <div className="p">In the last years, my path through the field of technology became increasingly clear. As I feel this is my calling, I never stopped investing work, time and dedication in it. My wish to continue studying at the Faculty of Computer Science in Iasi has been guided by most of my hobbies: programming, robots building and engineering.
                                                 </div>
                                                 <br/>
@@ -104,7 +104,7 @@ Piazeta reserves its right to eliminate any of the users who don’t follow the 
                         </Card>
                         <Card interactive={false} elevation={Elevation.FOUR}
                               className="background-primary text-lg-left mb-3">
-                            <div className="h3">The Future</div>
+                            <div className="h3" style={{fontFamily:'Retroholic', fontSize:45}}>The Future</div>
                             <div className="p">Going so far and just giving up isn’t our way of doing things. That being said, we will continue to add different functionalities to the website for the good of our users.  
                                 Our plan looks as follows: 
                                 <li className="list_future">a review system for users ( so you can better tell
@@ -121,15 +121,22 @@ Piazeta reserves its right to eliminate any of the users who don’t follow the 
                             </div>
                             <br/>
                             <div className="p">With much love,</div>
-                            <div className="h5">The Piazeta Team</div>
+                            <div className="h5" style={{fontFamily:'Retroholic', fontSize:45}}>The Piazeta Team</div>
                         </Card>
                     </div>
                     <div className="col-lg-2"/>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            {/* <div class="row justify-content-center">
                 <img src={back_button} onClick={this.goBack} alt="backbtn_about_us" style={{height:32, backgroundColor:"darkred", borderRadius:15, marginTop: 7}}/>
-            </div>
+            </div> */}
+            <div class="row mt-3 mb-2">
+                    <div class="col">
+                        <button style={{borderRadius:20, backgroundColor:'darkred', padding:5, width:100}} onClick={()=>this.props.history.goBack()}>
+                        <img src={back_button} style={{height:25}} />Return
+                        </button>
+                    </div>
+                </div>
             <div className="spatiu_gol"/>
             </>
         )
