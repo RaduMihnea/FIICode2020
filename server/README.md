@@ -7,45 +7,31 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About $Retro-site
+## About Piazeta-Server
 
-$Retro-site is currently a work-in-progress project meant for the FIICode 2020 Contest. It's meant to present how an online marketplace would look like in the 90'-00's. $Retro-site is just a middle-man of the buy/sell action. $Retro-site does not take responsibility for eventual theft, hustling or other means of law breaking. $Retro-site can be selective with the sell announcements that are added and reserves it's right to choose it's users. A further code of conduct will be available on the final version.
-
-The final version should include:
-
-- Platform to sell/buy items
-- Platform to find the nearest post-office from where you can contact the buyer/seller
-- Check-out page will be just a mean of contact, no actual money included (imitating the technological limitations of the retro time)
-- ...
-
-## Contributors
-
-Radu Mihnea-Adrian, 12th Grade National College, Backend Developer
-
-Lapusneanu Andrei-Eugen, 12th Grade National College, Frontend Dev
-
-## Code of Conduct
-
-To be added
+The server part of the application is built using [Laravel](https://laravel.com) 6.17 Framework. It acts as a CRUD Api connecting to the Database. The application also creates the Databases tables and seeds it at start ( using Laravels migrations and seeders ). The routes are protected by the Passport OAuth2. The main principles of the laravel framework can be viewed in the documentations.
 
 ## Installation Guide
 
 1) Clone or download repo
-2) Start local server ( xampp or any other Apache app )
-3) Create local database named 'retrosite'
-4) Open project folder using IDE of choice
-5) Run 'php artisan migrate' & 'php artisan serve' commands in terminal
-6) Server opens up on port 8000 (default) connect via localhost:8000/
+2) Start local server and database ( we used xampp but any other Apache app will work (WAMP, MAMP etc))
+3) Create local database named 'retrosite' ( in our case by following 'localhost/phpmyadmin')
+4) Copy the .env.example file and rename it to .env. Adjust data inside accordingly.
+5) Open a terminal inside the root folder of the server app and run the following commands in order:
+     * `composer install`
+     * `php artisan key:generate`
+     * `php artisan migrate`
+     * `php artisan db:seed`
+     * `php artisan passport:install`
+     * `php artisan serve`
+6) Server opens up on port 8000 (default) connect via localhost:8000/api
 
-Prerequisites: Php ^7.0, Laravel ^6.0, Composer, Npm
+##### Note: For testing purposes, an user with the credentials: `email: admin@piazeta.com ; password: administrator` with admin privileges will be created at start. The app currently comes with no build in products on the market, but we hope to make a Seeder for that in the following updates
 
-An online host for testing will be provided ar a further date, will link in read.me
+Prerequisites: Php ^7.0, Laravel ^6.0, Composer, Any local Apache server of your liking.
 
+Any further information can be asked by sending an email to [Radu Mihnea](mailto:radumihneaa@gmail.com).
 
-## Security Vulnerabilities
+## Available Scripts
 
-If you discover a security vulnerability within $Retro-site, please send an e-mail to Radu Mihnea via [radumihneaa@gmail.com](mailto:radumihneaa@gmail.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-$Retro-site is an open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+In the project directory, you can run: `php artisan` to get more info over on all available commands
