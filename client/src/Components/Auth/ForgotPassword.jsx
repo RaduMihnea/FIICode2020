@@ -25,7 +25,7 @@ export default class ForgotPassword extends Component {
             button_clicks:this.state.button_clicks+1
         })
         event.preventDefault();
-        window.location.href='/home';
+        setTimeout(()=>{window.location.href = '/home';}, 2000);
     }
 
     render() {

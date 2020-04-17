@@ -373,9 +373,9 @@
                                                         <img
                                                             class="adapt-img"
                                                             src="{{$product['image']}}"
-                                                            alt="Item #1"
+                                                            alt="Image not visible on gmail"
                                                             style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"
-                                                            title="Item #1" width="219"> a</a></td>
+                                                            title="Item #1" width="219"></a></td>
                                             </tr>
                                             <tr style="border-collapse:collapse;">
                                                 <td align="center" style="padding:0;Margin:0;padding-top:15px;"><h4
@@ -483,7 +483,7 @@
                                                                 align="center"><a target="_blank"
                                                                                   style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;font-size:20px;text-decoration:none;display:block;color:#FFFFFF;"
                                                                                   href="https://www.instagram.com/piazetaa/"><img
-                                                                        src="../../../public/instagramlogo.png"
+                                                                        src="https://api.piazeta.com/instagramlogo.png"
                                                                         alt title height="27"
                                                                         align="absmiddle"
                                                                         style="display:inline-block !important;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;padding-bottom:5px;"><br></a>

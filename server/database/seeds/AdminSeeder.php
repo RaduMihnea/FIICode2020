@@ -16,7 +16,7 @@ class AdminSeeder extends Seeder
         $admin= [
             "email" => "admin@piazeta.com",
             "name" => "Administrator",
-            "password" => Hash::make("admin123"),
+            "password" => Hash::make("administrator"),
             "age" => "0",
             "image" => "admin",
             "county_id" => "2",

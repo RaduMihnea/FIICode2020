@@ -61,7 +61,7 @@ class OrderController extends Controller
     public function validation(Order $order, Request $request)
     {
         $request->validate(['validation' => 'required']);
-        if ($order->seller()->id === auth()->user()->id || auth()->user()->isAdmin()) {
+        if ($order->seller->id === auth()->user()->id || auth()->user()->isAdmin()) {
             if($request['validation'] == false){
                 $order->validation(false);
                 foreach ($order->products as $product) {
