@@ -36,10 +36,10 @@ export default class ResetPassword extends Component {
         if (this.state.newPassword === this.state.confirmNewPassword) {
             axiosRequest.post("password/reset", new_password_details).then(response => {
                 this.setState({mesaj: "Your new password is set, please log in!"})
+                setTimeout(()=>{window.location.href = '/home';}, 1000);
             }).catch(error => {
                 console.log("registration error", error);
             })
-            window.location.href = '/home';
         }
         else
             this.setState({mesaj: "Password and password confirmation do not match"})
