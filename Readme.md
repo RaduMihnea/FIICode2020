@@ -11,7 +11,7 @@ Our features include:
 
 ## Presentational video
 
-Our official presentational video can be watched [here](https://youtu.be/7YpglqiMOxo). Unfortunately, Github doesn't allow large files as our presentation to be uploaded. 
+Our official presentational video can be watched [here](https://www.youtube.com/watch?v=SCKI2ExVJNk). Unfortunately, Github doesn't allow large files as our presentation to be uploaded. 
 
 ## Contributors
 
