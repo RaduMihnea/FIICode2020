@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cee2dcbe-6117-4f4c-81fb-07924243a68c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app/Http/Controllers/OrderController.php" afterPath="$PROJECT_DIR$/server/app/Http/Controllers/OrderController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/config/app.php" afterPath="$PROJECT_DIR$/server/config/app.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,16 +15,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/App.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,11 +103,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/app/Http/Controllers/OrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="62" column="34" lean-forward="false" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+            <state relative-caret-position="322">
+              <caret line="64" column="42" lean-forward="false" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/bootstrap/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="e#7#407#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/config/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="67" column="6" lean-forward="true" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -128,18 +140,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1909">
               <caret line="91" column="67" lean-forward="false" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="67" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Map.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/Components/Map/Map.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2898">
-              <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -173,6 +173,7 @@
         <option value="$PROJECT_DIR$/server/resources/views/mail/denied.blade.php" />
         <option value="$PROJECT_DIR$/server/resources/views/mail/confirmed.blade.php" />
         <option value="$PROJECT_DIR$/server/app/Http/Controllers/OrderController.php" />
+        <option value="$PROJECT_DIR$/server/config/app.php" />
       </list>
     </option>
   </component>
@@ -333,7 +334,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../retrosite-app" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="orderContro&#9;null&#9;null&#10;new-&#9;FILE&#9;file://C:/Users/Mihnea/Desktop/FIICode/retro-site/server/resources/views/mail/new-order.blade.php&#10;map.jsx&#9;FILE&#9;file://C:/Users/Mihnea/Desktop/FIICode/retro-site/client/src/Components/Map/Map.jsx&#10;Map.js&#9;FILE&#9;file://C:/Users/Mihnea/Desktop/FIICode/retro-site/server/node_modules/async/map.js" />
+    <property name="SearchEverywhereHistoryKey" value="app.php&#9;FILE&#9;file://C:/Users/Mihnea/Desktop/FIICode/retro-site/server/config/app.php&#10;orderContro&#9;null&#9;null&#10;new-&#9;FILE&#9;file://C:/Users/Mihnea/Desktop/FIICode/retro-site/server/resources/views/mail/new-order.blade.php&#10;map.jsx&#9;FILE&#9;file://C:/Users/Mihnea/Desktop/FIICode/retro-site/client/src/Components/Map/Map.jsx&#10;Map.js&#9;FILE&#9;file://C:/Users/Mihnea/Desktop/FIICode/retro-site/server/node_modules/async/map.js" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -774,7 +775,7 @@
       <updated>1586971790691</updated>
       <workItem from="1586971792049" duration="5534000" />
       <workItem from="1587060667575" duration="1611000" />
-      <workItem from="1587123760723" duration="101000" />
+      <workItem from="1587123760723" duration="636000" />
     </task>
     <task id="LOCAL-00001" summary="Rebase">
       <created>1586971989104</created>
@@ -797,11 +798,18 @@
       <option name="project" value="LOCAL" />
       <updated>1587060997078</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Validation Route bug">
+      <created>1587123875187</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587123875187</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7246000" />
+    <option name="totallyTimeSpent" value="7781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -850,7 +858,8 @@
     <MESSAGE value="Rebase" />
     <MESSAGE value="Small Front-end Changes to inputs" />
     <MESSAGE value="Changes to server mail" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes to server mail" />
+    <MESSAGE value="Validation Route bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validation Route bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -942,7 +951,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1016,7 +1025,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1070,7 +1079,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1217,8 +1226,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/app/Http/Controllers/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="62" column="34" lean-forward="false" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+        <state relative-caret-position="322">
+          <caret line="64" column="42" lean-forward="false" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/bootstrap/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#407#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="67" column="6" lean-forward="true" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
           <folding />
         </state>
       </provider>
